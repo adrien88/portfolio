@@ -42,8 +42,6 @@ body {
       background-color: rgba(0, 0, 0, 0.5);
       color: white;
       padding: 1em; }
-    body header .content, body footer .content {
-      height: 100%; }
   body header p {
     margin-left: 2em;
     font-family: 'Roboto'; }
@@ -82,7 +80,6 @@ body {
       padding-left: 2em;
       text-transform: uppercase; }
   body section {
-    min-height: 100vh;
     background-image: linear-gradient(45deg, black, gray); }
     body section div.lat-translate {
       background-color: rgba(255, 255, 255, 0.8);

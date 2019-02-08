@@ -1,7 +1,9 @@
 <?php
 
 class pageManager {
-
+  /*
+      GET page from urls
+  */
   public function getByUrl($url){
     global $PDO;
     $req='SELECT * FROM pages WHERE url = ? ;';
@@ -13,13 +15,16 @@ class pageManager {
     return false;
   }
 
+  /*
+      GET urls list to create a menu
+  */
   public function getUrls(){
     global $PDO;
-    $req='SELECT url,title FROM pages WHERE url = ? ;';
+    $req='SELECT url,title FROM pages ;';
     $stat=$PDO->prepare($req);
-    $stat->execute(array($url));
+    $stat->execute();
     if($stat!==false){
-      return $stat->fetch();
+      return $stat->fetchAll();
     }
     return false;
   }

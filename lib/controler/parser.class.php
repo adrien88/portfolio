@@ -21,7 +21,7 @@
             $key = substr($patt,1);
 
             if(isset($data[$key])){
-              if(file_exists($dir.$data[$key])){
+              if(file_exists($dir.$data[$key]) && is_file($dir.$data[$key])){
                 $subtpl=self::auto($dir.$data[$key],$data,$opts);
                 $tpl=str_replace($patt,$subtpl,$tpl);
               }else{

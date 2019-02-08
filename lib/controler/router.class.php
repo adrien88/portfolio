@@ -7,10 +7,10 @@ class router {
       $out=[];
       $out['path']=array_keys($_GET)[0];
       $parts=explode('/',$out['path']);
-      $out['root']='./';
-      for($i=0;$i<count($out);$i++){
-        $out['root'].='../';
-      }
+      // $out['docRoot']='';
+      // for($i=1;$i<=count($parts);$i++){
+      //   $out['docRoot'].='../';
+      // }
       $out['page']=str_replace('_','.',array_shift($parts));
       $out['obj']=array_shift($parts);
       $out=array_merge($out,$parts);

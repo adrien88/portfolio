@@ -18,6 +18,7 @@
     'header'=>'header.tpl',
     'footer'=>'footer.tpl',
   ];
+  $THEM = 'lib/public/thems/'.$CONFIG['themDefault'];
 
   /*
       load PDO
@@ -31,27 +32,17 @@
       include 'lib/controler/'.$class.'.class.php';
   });
 
-  /*
-      create USER
-  */
+  /* create USER */
   $USER = new user();
-  /*
-      create PAGE
-  */
+  /* create PAGE */
   $page = new page();
 
-    /*
-        Create Nav
-    */
-    $data = $page->getUrls();
-    if(isset($data) and $data!==false){
-      $listpage='';
-      foreach($data as $elem){
-        $listpage.='<li class="nav-item"><a class="nav-link" href="'.$elem['url'].'">'.$elem['title'].'</a></li>';
-      }
-      
-    }
-    // Nevoyer NAVBAR
+
+  // GENERATE MENU
+  $addTPL = [
+    'navbar_pages'=>$page->BootstrapMenu()
+  ];
+  $TPL=array_merge($TPL,$addTPL);
 
   /*
       Get PATH
@@ -59,9 +50,11 @@
   $PATH=router::auto($CONFIG['landing']);
   // print_r($PATH);
   $addTPL = [
-    'title'=>$PATH['page'].'|'.$CONFIG['sitetitle'],
+    'title'=>$PATH['page'].' | '.$CONFIG['sitetitle'],
+    'docRoot'=>$PATH['docRoot']
   ];
   $TPL=array_merge($TPL,$addTPL);
+  // echo '>>'.$PATH['docRoot'];
 
   /*
       Load from cache
@@ -83,7 +76,9 @@
   if($data !== false){
     $addTPL = [
       'main'=>'page.tpl',
-      'main_title'=>$data['title'],
+      'header_title'=>$data['title'],
+      'header_desc'=>$data['description'],
+      'header_bg'=>$data['picture'],
       'main_dpub'=>$data['dpub'],
       'main_content'=>$data['content']
     ];
@@ -91,8 +86,8 @@
   } else{
     $addTPL = [
       'main'=>'main.tpl',
-      'main_title'=>'404',
-      'main_content'=>'Je ne peux pas trouver le fichier.'
+      'main_title'=>'Erreur :',
+      'main_content'=>'Cette page n\'éxiste pas.'
     ];
   }
 
@@ -113,7 +108,7 @@
       Build page
   */
   // $tpl = file_get_contents();
-  echo parser::auto('lib/public/tpl/index.tpl',$TPL,$opts);
+  echo parser::auto($THEM.'/tpl/index.tpl',$TPL,$opts);
 
 
  ?>
