@@ -1,0 +1,172 @@
+/*********************** Polices ****************************************/
+@font-face {
+  font-family: 'boisustroke';
+  src: url("../fonts/boisu-stroke-webfont.eot");
+  src: url("../fonts/boisu-stroke-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/boisu-stroke-webfont.woff2") format("woff2"), url("../fonts/boisu-stroke-webfont.woff") format("woff"), url("../fonts/boisu-stroke-webfont.ttf") format("truetype"), url("../fonts/boisu-stroke-webfont.svg#boisustroke") format("svg"); }
+@font-face {
+  font-family: 'exo_2bold';
+  src: url("../fonts/exo2-bold-webfont.eot");
+  src: url("../fonts/exo2-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/exo2-bold-webfont.woff2") format("woff2"), url("../fonts/exo2-bold-webfont.woff") format("woff"), url("../fonts/exo2-bold-webfont.ttf") format("truetype"), url("../fonts/exo2-bold-webfont.svg#exo_2bold") format("svg"); }
+@font-face {
+  font-family: 'exo_2regular';
+  src: url("../fonts/exo2-regular-webfont.eot");
+  src: url("../fonts/exo2-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/exo2-regular-webfont.woff2") format("woff2"), url("../fonts/exo2-regular-webfont.woff") format("woff"), url("../fonts/exo2-regular-webfont.ttf") format("truetype"), url("../fonts/exo2-regular-webfont.svg#exo_2regular") format("svg"); }
+body {
+  background: url("../img/background.svg") no-repeat;
+  background-size: cover; }
+  body header {
+    background-color: rgba(172, 223, 245, 0.7);
+    height: 150px; }
+    @media screen and (max-width: 575px) {
+      body header img {
+        display: none; } }
+    @media screen and (min-width: 576px) and (max-width: 640px) {
+      body header img {
+        display: none; } }
+    @media screen and (min-width: 641px) and (max-width: 991px) {
+      body header img {
+        display: none; } }
+    body header #header-container {
+      min-height: 150px; }
+      body header #header-container .row {
+        min-height: 150px; }
+        body header #header-container .row div {
+          display: flex;
+          align-items: center;
+          justify-content: center; }
+          body header #header-container .row div h1 {
+            font-size: 60px;
+            font-family: "boisustroke";
+            color: #005874; }
+            @media screen and (max-width: 305px) {
+              body header #header-container .row div h1 {
+                font-size: 30px; } }
+            @media screen and (min-width: 306px) and (max-width: 767px) {
+              body header #header-container .row div h1 {
+                font-size: 45px; } }
+  body section {
+    min-height: 600px;
+    padding-top: 10px; }
+    body section #regles {
+      color: white; }
+      body section #regles p {
+        font-size: 30px;
+        font-family: "exo_2regular";
+        text-align: center;
+        font-weight: bold; }
+        @media screen and (max-width: 346px) {
+          body section #regles p {
+            font-size: 12px; } }
+        @media screen and (min-width: 347px) and (max-width: 398px) {
+          body section #regles p {
+            font-size: 12px; } }
+        @media screen and (min-width: 399px) and (max-width: 468px) {
+          body section #regles p {
+            font-size: 14px; } }
+        @media screen and (min-width: 468px) and (max-width: 564px) {
+          body section #regles p {
+            font-size: 17px; } }
+        @media screen and (min-width: 564px) and (max-width: 768px) {
+          body section #regles p {
+            font-size: 22px; } }
+        @media screen and (min-width: 768px) and (max-width: 991px) {
+          body section #regles p {
+            font-size: 30px; } }
+    body section #resultat-input {
+      align-items: center; }
+      body section #resultat-input #computer #resultat {
+        margin-top: 20px;
+        min-height: 300px;
+        background-color: white;
+        border: 15px #005874 solid;
+        margin-bottom: 7px;
+        border-radius: 15px 15px 0 0; }
+        body section #resultat-input #computer #resultat ul {
+          list-style: none;
+          padding-left: 0; }
+          body section #resultat-input #computer #resultat ul li {
+            font-size: 25px;
+            padding-left: 10px;
+            text-align: left;
+            font-family: "exo_2regular";
+            color: blue; }
+            body section #resultat-input #computer #resultat ul li.less {
+              color: steelblue; }
+            body section #resultat-input #computer #resultat ul li.more {
+              color: #e9722e; }
+            body section #resultat-input #computer #resultat ul li.win {
+              color: green; }
+            body section #resultat-input #computer #resultat ul li.lose {
+              color: red; }
+            body section #resultat-input #computer #resultat ul li.error {
+              color: gray; }
+            @media screen and (max-width: 379px) {
+              body section #resultat-input #computer #resultat ul li {
+                font-size: 15px; } }
+            @media screen and (min-width: 380px) and (max-width: 439px) {
+              body section #resultat-input #computer #resultat ul li {
+                font-size: 20px; } }
+            @media screen and (min-width: 439px) and (max-width: 640px) {
+              body section #resultat-input #computer #resultat ul li {
+                font-size: 24px; } }
+            @media screen and (min-width: 641px) and (max-width: 1200px) {
+              body section #resultat-input #computer #resultat ul li {
+                font-size: 28px; } }
+      @media screen and (min-width: 767px) and (max-width: 991px) {
+        body section #resultat-input #computer #laptop-bottom {
+          width: 100%; } }
+      @media screen and (min-width: 1201px) {
+        body section #resultat-input #computer #laptop-bottom {
+          margin-bottom: 50px; } }
+      @media screen and (min-width: 992px) and (max-width: 1200px) {
+        body section #resultat-input #computer #laptop-bottom {
+          margin-bottom: 50px; } }
+      body section #resultat-input #form {
+        background-color: rgba(0, 100, 175, 0.8);
+        border-radius: 5px;
+        padding: 1em;
+        margin: 1em;
+        text-align: center; }
+        body section #resultat-input #form label {
+          color: #FFBE00;
+          font-weight: bold;
+          font-family: "exo_2regular"; }
+          @media screen and (max-width: 767px) {
+            body section #resultat-input #form label {
+              font-size: 15px; } }
+          @media screen and (min-width: 767px) and (max-width: 991px) {
+            body section #resultat-input #form label {
+              font-size: 20px; } }
+          @media screen and (min-width: 992px) and (max-width: 1200px) {
+            body section #resultat-input #form label {
+              font-size: 24px; } }
+          @media screen and (min-width: 1201px) {
+            body section #resultat-input #form label {
+              font-size: 28px; } }
+        body section #resultat-input #form #saisie {
+          width: 100%;
+          margin: .5em;
+          margin-left: auto;
+          margin-right: auto; }
+        body section #resultat-input #form #submit {
+          cursor: pointer;
+          font-family: "exo_2regular";
+          background-color: #FFBE00;
+          border: none;
+          margin-left: auto;
+          margin-right: auto;
+          width: 100%; }
+        body section #resultat-input #form #rejouer {
+          text-align: center;
+          cursor: pointer;
+          display: none;
+          border: none;
+          text-decoration: none;
+          background-color: #FFBE00;
+          font-family: "exo_2regular";
+          width: 100%; }
+  body footer {
+    height: 100px;
+    background-color: rgba(172, 223, 245, 0.7); }
+
+/*# sourceMappingURL=style.css.map */

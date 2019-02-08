@@ -1,0 +1,305 @@
+/*********************** Polices ****************************************/
+
+@font-face {
+    font-family: 'boisustroke';
+    src: url('../fonts/boisu-stroke-webfont.eot');
+    src: url('../fonts/boisu-stroke-webfont.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/boisu-stroke-webfont.woff2') format('woff2'),
+        url('../fonts/boisu-stroke-webfont.woff') format('woff'),
+        url('../fonts/boisu-stroke-webfont.ttf') format('truetype'),
+        url('../fonts/boisu-stroke-webfont.svg#boisustroke') format('svg');
+}
+
+@font-face {
+    font-family: 'exo_2bold';
+    src: url('../fonts/exo2-bold-webfont.eot');
+    src: url('../fonts/exo2-bold-webfont.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/exo2-bold-webfont.woff2') format('woff2'),
+        url('../fonts/exo2-bold-webfont.woff') format('woff'),
+        url('../fonts/exo2-bold-webfont.ttf') format('truetype'),
+        url('../fonts/exo2-bold-webfont.svg#exo_2bold') format('svg');
+}
+
+@font-face {
+    font-family: 'exo_2regular';
+    src: url('../fonts/exo2-regular-webfont.eot');
+    src: url('../fonts/exo2-regular-webfont.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/exo2-regular-webfont.woff2') format('woff2'),
+        url('../fonts/exo2-regular-webfont.woff') format('woff'),
+        url('../fonts/exo2-regular-webfont.ttf') format('truetype'),
+        url('../fonts/exo2-regular-webfont.svg#exo_2regular') format('svg');
+}
+
+
+$font-titre: 'boisustroke';
+$font-texte: 'exo_2regular';
+$dark-blue: #005874;
+$light-blue: #1C819E;
+$yellow: #FFBE00;
+$white: #E6E6D4;
+
+// **************************** BODY *****************************//
+
+body {
+    background: url('../img/background.svg') no-repeat;
+    background-size: cover;
+
+    // **************************** HEADER *****************************//
+
+    header {
+        background-color: rgba(172, 223, 245, 0.7);
+        height: 150px;
+
+         img{
+             // très petits écrans xs //
+         @media screen and (max-width: 575px) {
+             display: none;
+        }
+
+        // petits écrans sm //
+        @media screen and (min-width: 576px) and (max-width: 640px) {
+            display: none;
+        }
+
+        // écrans moyens md //
+        @media screen and (min-width: 641px) and (max-width: 991px) {
+            display: none;
+        }
+
+         }
+
+
+        #header-container {
+
+            min-height: 150px;
+
+            .row {
+                min-height: 150px;
+
+                div {
+
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    h1 {
+                        font-size: 60px;
+                        font-family: $font-titre;
+                        color: $dark-blue;
+
+                       // petits écrans sm //
+                       @media screen and (max-width: 305px) {
+                        font-size: 30px;
+                       }
+
+                       // écrans moyens md //
+                       @media screen and (min-width: 306px) and (max-width: 767px) {
+                           font-size: 45px;
+                       }
+                    }
+                }
+            }
+        }
+
+
+    }
+
+
+    // **************************** SECTION *****************************//
+    section {
+
+        min-height: 600px;
+        //height: 700px;
+        padding-top: 10px;
+
+        #regles {
+            color: white;
+
+            p {
+                font-size: 30px;
+                font-family: $font-texte ;
+                text-align: center;
+                font-weight: bold;
+
+                @media screen and (max-width: 346px) {
+                    font-size: 12px;
+                }
+
+                @media screen and (min-width: 347px) and  (max-width: 398px) {
+                    font-size: 12px;
+                }
+
+                @media screen and (min-width: 399px) and  (max-width: 468px) {
+                    font-size: 14px;
+                }
+
+                @media screen and (min-width: 468px) and (max-width: 564px) {
+                    font-size: 17px;
+                }
+
+                @media screen and (min-width: 564px) and (max-width: 768px) {
+                    font-size: 22px;
+                }
+
+                @media screen and (min-width: 768px) and (max-width: 991px) {
+                    font-size: 30px;
+                }
+            }
+        }
+
+        #resultat-input {
+
+            align-items: center;
+
+            #computer{
+                #resultat {
+                    margin-top: 20px;
+                    min-height: 300px;
+                    background-color: white;
+                    border: 15px $dark-blue solid ;
+                    margin-bottom: 7px;
+                    border-radius: 15px 15px 0 0;
+
+                    ul {
+                        list-style: none;
+                        padding-left: 0;
+
+                        li {
+                            font-size: 25px;
+                            padding-left: 10px;
+                            text-align: left;
+                            font-family: $font-texte;
+                            color: blue;
+
+                            // Specials class colors defined by js script
+                            // gamer too hight : text in steel blue
+                            &.less {
+                              color:steelblue;
+                            }
+                            // gamer too low : text in orange
+                            &.more {
+                              color:#e9722e;
+                            }
+
+                            // gamer won : text in green
+                            &.win {
+                              color:green;
+                            }
+                            // gamer lose : text in red
+                            &.lose {
+                              color:red;
+                            }
+                            //  error : text in blue
+                            &.error {
+                              color:gray;
+                            }
+                            // end of specials colors
+
+                            @media screen and (max-width: 379px) {
+                                font-size: 15px;
+                            }
+                            @media screen and (min-width: 380px) and (max-width: 439px) {
+                                font-size: 20px;
+                            }
+                            @media screen and (min-width: 439px) and (max-width: 640px) {
+                                font-size: 24px;
+                            }
+                            @media screen and (min-width: 641px) and (max-width: 1200px) {
+                                font-size: 28px;
+                            }
+                        }
+                    }
+                }
+
+                #laptop-bottom{
+
+                    @media screen and (min-width: 767px) and (max-width: 991px) {
+                        width: 100%;
+                    }
+
+                    @media screen and (min-width: 1201px) {
+                        margin-bottom: 50px;
+                    }
+
+                    @media screen and (min-width: 992px) and (max-width: 1200px) {
+                        margin-bottom: 50px;
+                    }
+                }
+            }
+
+
+            #form {
+
+              background-color: rgba(000,100,175,0.8);
+              border-radius: 5px;
+              padding:1em;
+              margin:1em;
+              text-align: center;
+
+              label {
+                color: $yellow;
+                // font-size: 25px;
+                font-weight: bold;
+                font-family: $font-texte;
+
+                @media screen and (max-width: 767px) {
+
+                    font-size: 15px;
+                }
+                @media screen and (min-width: 767px) and (max-width: 991px) {
+                    font-size: 20px;
+                }
+                @media screen and (min-width: 992px) and (max-width: 1200px) {
+                  font-size: 24px;
+                }
+                @media screen and (min-width: 1201px) {
+                  font-size: 28px;
+                }
+
+              }
+
+                #saisie{
+                  width:100%;
+                  margin:.5em;
+                  margin-left: auto;
+                  margin-right: auto;
+
+                }
+
+                #submit {
+                  cursor: pointer;
+                  font-family: $font-texte ;
+                  background-color: $yellow;
+                  border: none;
+                  margin-left: auto;
+                  margin-right: auto;
+                  width:100%;
+
+                }
+
+                #rejouer {
+                  text-align: center;
+                  cursor: pointer;
+                  display: none;
+                  border: none;
+                  text-decoration: none;
+                  background-color: $yellow;
+                  font-family: $font-texte ;
+                  width:100%;
+                }
+
+            }
+        }
+
+    }
+
+
+
+    // **************************** FOOTER *****************************//
+
+    footer {
+        height: 100px;
+        background-color: rgba(172, 223, 245, 0.7);
+    }
+
+}

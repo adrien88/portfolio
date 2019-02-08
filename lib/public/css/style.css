@@ -1,0 +1,201 @@
+/* ----------------------------------------------------------------------------------------------
+    FONT FACE DEFININF
+
+---------------------------------------------------------------------------------------------- */
+@font-face {
+  font-family: 'Roboto';
+  src: url("../fonts/roboto/Roboto-Regular.ttf"); }
+@font-face {
+  font-family: 'RobotoLight';
+  src: url("../fonts/roboto/Roboto-Light.ttf"); }
+@font-face {
+  font-family: 'RobotoBold';
+  src: url("../fonts/roboto/Roboto-Bold.ttf"); }
+/* ----------------------------------------------------------------------------------------------
+  START OF BODY
+---------------------------------------------------------------------------------------------- */
+body {
+  scroll-behavior: smooth;
+  font-family: 'Roboto';
+  background-color: black;
+  color: white;
+  /* ----------------------------------------------------------------------------------------------
+  SuperEFFECT
+  ---------------------------------------------------------------------------------------------- */ }
+  body p, body li, body a {
+    color: white;
+    font-family: 'RobotoLight';
+    font-size: 1.1em;
+    font-weight: normal; }
+    body p:hover, body li:hover, body a:hover {
+      color: white; }
+  body h1, body h2 {
+    font-family: 'RobotoBold';
+    font-size: 1.4em; }
+  body h1 {
+    font-size: 2.2em; }
+  body header, body footer {
+    background-image: url("../medias/cute-owl-wallpaper.jpg");
+    background-attachment: fixed;
+    background-size: cover; }
+    body header div, body footer div {
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      padding: 1em; }
+    body header .content, body footer .content {
+      height: 100%; }
+  body header p {
+    margin-left: 2em;
+    font-family: 'Roboto'; }
+  body header .technoUsed {
+    display: inline-block;
+    padding: .5em; }
+    body header .technoUsed i {
+      font-size: 1.2em; }
+  body header #t-html i {
+    color: orange; }
+  body header #t-css i {
+    color: steelblue; }
+  body header #t-js i {
+    color: gold; }
+  body header #t-php i {
+    color: purple; }
+  body header #t-sql i {
+    color: cyan; }
+  body .row {
+    padding: 0; }
+  body .navbar ul li a {
+    text-decoration: none;
+    color: gray; }
+    body .navbar ul li a:hover {
+      color: white; }
+  body .h2-title {
+    background-color: black;
+    color: white;
+    padding: .5em;
+    width: 100%; }
+    body .h2-title h2 {
+      font-family: 'RobotoLight';
+      font-size: 2em;
+      margin: 0px;
+      padding: 0px;
+      padding-left: 2em;
+      text-transform: uppercase; }
+  body section {
+    min-height: 100vh;
+    background-image: linear-gradient(45deg, black, gray); }
+    body section div.lat-translate {
+      background-color: rgba(255, 255, 255, 0.8);
+      color: black;
+      padding: 2em; }
+      body section div.lat-translate ul li {
+        list-style: none;
+        display: inline-block; }
+        body section div.lat-translate ul li a {
+          display: block;
+          font-family: 'Roboto';
+          color: black;
+          padding: .25em;
+          margin: .5em;
+          border: 2px solid #88a; }
+          body section div.lat-translate ul li a:hover {
+            color: white;
+            text-decoration: none;
+            background-image: linear-gradient(to top, #88a, #aac); }
+  body footer .h2-title {
+    text-align: center;
+    letter-spacing: .25em; }
+  body footer div {
+    padding-top: 1em; }
+  body footer ul {
+    padding-left: 0em; }
+    body footer ul li {
+      list-style: none; }
+    body footer ul a {
+      color: #ccc; }
+    body footer ul li:hover a {
+      color: white; }
+  body div#newAnim {
+    padding: 0px !important; }
+    body div#newAnim a .projet_thumbnail {
+      background-size: cover;
+      background-position: center center; }
+      body div#newAnim a .projet_thumbnail .zoneTexte {
+        margin: 0px;
+        padding: 0px;
+        background-color: rgba(0, 0, 0, 0.9);
+        transition: 1s background; }
+        body div#newAnim a .projet_thumbnail .zoneTexte h3 {
+          margin: 0px;
+          padding: 1em;
+          padding-top: 6em;
+          font-weight: bolder;
+          display: inline-block;
+          background-color: black;
+          color: white;
+          transition: 1s all;
+          transform: rotate(-90deg); }
+        body div#newAnim a .projet_thumbnail .zoneTexte:hover {
+          background-color: rgba(0, 0, 0, 0.2);
+          transition: 1s background;
+          padding: 2em; }
+          body div#newAnim a .projet_thumbnail .zoneTexte:hover h3 {
+            background-color: white;
+            color: black;
+            padding-top: 12em;
+            padding-bottom: 2em;
+            transition: 1s all;
+            transform: rotate(0deg); }
+
+/* ----------------------------------------------------------------------------------------------
+MEDIA QUERIES
+Responsives elements
+---------------------------------------------------------------------------------------------- */
+@media screen and (max-width: 574px) {
+  article div {
+    margin-top: 10%;
+    margin-bottom: 10%;
+    margin-left: 0%;
+    width: 100%; }
+
+  article:hover > div {
+    margin-left: 0%; } }
+@media screen and (min-width: 575px) and (max-width: 1024px) {
+  .animated div {
+    background-color: rgba(250, 250, 250, 0.5) !important;
+    margin-left: 10%;
+    transition: 1s all;
+    width: 80%; }
+
+  .animated:hover > div {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    margin-left: 5%;
+    transition: 1s all; } }
+@media screen and (min-width: 1025px) {
+  .animated div {
+    opacity: .5 !important;
+    margin-left: 5%;
+    transition: 1s all;
+    width: 50%; }
+
+  .animated:hover > div {
+    opacity: 1 !important;
+    margin-left: 10%;
+    transition: 1s all; }
+
+  .animated div.reverse {
+    margin-left: 15%;
+    transition: 1s all; }
+
+  .animated:hover > div.reverse {
+    margin-left: 10%; }
+
+  .animated div ul a {
+    opacity: 0;
+    transition: .5s opacity .5s; }
+
+  .animated:hover ul a {
+    opacity: 1;
+    transition: .25s opacity .25s; } }
+
+/*# sourceMappingURL=style.css.map */

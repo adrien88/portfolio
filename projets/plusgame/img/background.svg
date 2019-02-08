@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.0//EN'  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="331.44mm" height="195.6mm" clip-rule="evenodd" fill-rule="evenodd" image-rendering="optimizeQuality" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" version="1.0" viewBox="0 0 35415 20900" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil3 {fill:none}
+    .fil0 {fill:#00A0E3}
+    .fil1 {fill:#FEFEFE;fill-opacity:0.360784}
+    .fil2 {fill:#FEFEFE;fill-opacity:0.501961}
+   ]]>
+  </style>
+   <clipPath id="a">
+    <path d="m0 0h35415v20900h-35415v-20900z"/>
+   </clipPath>
+ </defs>
+  <g clip-path="url(#a)">
+    <rect class="fil0" x="-886" y="-305" width="38391" height="22535"/>
+    <path class="fil1" d="m-1801 9583c1267-1521 6500 1175 9998 4091 3498 2915 6384 7126 5116 8646-1267 1521-6207-225-9705-3140-3498-2916-6676-8077-5409-9597z"/>
+    <path class="fil2" d="m-6723 16121h49848v1086h-49848v-1086z"/>
+    <path class="fil1" d="m44169 6541c2152 390-9498 5927-19833 10116s-22994 8436-25146 8046c-2152-389 7018-5267 17353-9456s25474-9095 27626-8706z"/>
+    <path class="fil2" d="m-2287-1437l42203 26529-577 919-42204-26529 578-919z"/>
+    <path class="fil1" d="m24225-8520c1356-1716 764 11170-400 22260-1163 11091-3368 24260-4723 25976-1356 1716-1349-8670-185-19761 1163-11091 3952-26759 5308-28475z"/>
+    <path class="fil1" d="m18249-9696c-473-2135 9137 6469 16996 14381 7858 7913 16668 17946 17141 20081s-7570-4436-15429-12348c-7858-7913-18235-19979-18708-22114z"/>
+    <path class="fil1" d="m-3837 269c-1829-1200 11059-1741 22209-1555 11151 186 24462 1227 26290 2427 1829 1200-8518 2104-19668 1918s-27003-1590-28831-2790z"/>
+  </g>
+  <path class="fil3" d="m0 0h35415v20900h-35415v-20900z"/>
+</svg>

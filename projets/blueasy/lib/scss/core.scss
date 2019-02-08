@@ -1,0 +1,498 @@
+
+/********************************************************************************
+    FONT FACE
+********************************************************************************/
+
+
+@font-face {
+  font-family: "segoe";
+  src:url('../fonts/segoeui.ttf') format("truetype");
+}
+@font-face {
+  font-family: "segoelight";
+  font-style: italic;
+  src:url('../fonts/segoeui.ttf') format("truetype");
+}
+@font-face {
+  font-family: "segoebold";
+  font-weight: bolder;
+  src:url('../fonts/segoeui.ttf') format("truetype");
+}
+
+/********************************************************************************
+    GENERIC
+********************************************************************************/
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #4e758b;
+  font-family: "segoe";
+}
+
+h1{
+  font-family: "segoelight";
+}
+
+h2{
+  font-size:2em;
+  font-family: "segoelight";
+  text-transform: uppercase;
+  text-decoration:none;
+  margin-bottom:1.5em;
+}
+
+section {
+  padding-top:4em;
+  padding-bottom:4em;
+  &:hover{
+    h2{
+      text-decoration:underline;
+    }
+  }
+}
+
+
+.nav-item {
+  padding:.25em;
+  padding-left:.5em;
+  padding-right:.5em;
+  margin-left:.75em;
+  margin-left:.75em;
+}
+
+.element {
+  width:100%;
+  color:white;
+  background-color: #515f6880;
+}
+
+/********************************************************************************
+
+    HEADER
+
+********************************************************************************/
+
+#header {
+  background-image: url('../images/wheat.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+
+  div #sitetitle{
+    margin-top:300px;
+    margin-bottom:200px;
+    h1{
+      text-align:center;
+      span{
+        text-transform: uppercase;
+        padding:.15em;
+        padding-left:.35em;
+        padding-right:.35em;
+        background-color: #353f46dd !important;
+      }
+       line-height: 200%;
+    }
+  }
+}
+
+
+/********************************************************************************
+
+    NAVBAR
+
+********************************************************************************/
+
+
+.sectionnavbar{
+  padding-top:2em;
+  padding-bottom:2em;
+  background-color: #353f46dd !important;
+
+  .navbar{
+    padding:0 !important;
+    background-color: #00000000 !important;
+    color:white !important;
+    display:flex;
+    justify-content: space-between;
+
+    .navbar-nav {
+      text-align:center;
+    }
+
+
+    h2 {
+      margin:0;
+    }
+    .nav-item {
+      border:1px solid #353f4600 !important;
+      text-transform: uppercase;
+      &:hover{
+        border:1px solid #4bcaff !important;
+        color:#4bcaff!important
+      }
+    }
+  }
+}
+
+.brand H2 {
+  font-family: "segoebold";
+  font-size:1.6em;
+}
+
+
+/********************************************************************************
+
+    SERVICES
+
+********************************************************************************/
+
+#services{
+  background-color: #4bcaff;
+  color:white;
+  img {
+    width:50px;
+    height:50px;
+  }
+}
+
+
+/********************************************************************************
+
+    PORTFOLIO
+
+********************************************************************************/
+
+#portfolio {
+  background-color: white;
+  color:black;
+
+  .navbar{
+
+    color:black !important;
+
+    .container {
+      padding:0;
+    }
+
+    h2 {
+      font-size:2em !important;
+      font-family: "segoelight" !important;
+    }
+
+    .nav-item {
+      font-size:1em !important;
+      text-transform: uppercase !important;
+      border:1px solid white;
+      &:hover{
+        border:1px solid #4bcaff !important;
+        color:#4bcaff !important;
+        cursor: grabbing;
+      }
+      &:active{
+        border:1px solid #4bcaff !important;
+        color:#4bcaff !important;
+      }
+    }
+  }
+
+  .square{
+    padding:1em;
+    min-height:200px;
+    height:50px;
+  }
+  .hiddenKeyword{
+    display:none;
+  }
+
+  .img {
+    width:100%;
+    height:100%;
+    background-position: center center;
+    transition:1s background-size;
+    background-size:cover;
+    img {
+      display:none;
+    }
+    .grayhover{
+      transition:1s all;
+      background-color:#00000000;
+    }
+    &:hover {
+      .grayhover{
+        background-color:#000000aa;
+        transition:1s all;
+        width:100%;
+        height:100%;
+      }
+      img {
+        display:block;
+      }
+      background-size:cover;
+      transition:1s background-size;
+      background-size:200%;
+    }
+  }
+
+
+  #bridge{
+    background-image:url('../images/bridge.gallery.jpg');
+  }
+
+  #GoldenGateSmog{
+    background-image:url('../images/GoldenGateSmog.gallery.jpg');
+  }
+
+  #seaSmog{
+    background-image:url('../images/seaSmog.gallery.jpg');
+  }
+
+  #seaRiver{
+    background-image:url('../images/seaRiver.gallery.jpg');
+  }
+
+  #woodenHouse{
+    background-image:url('../images/woodenHouse.gallery.jpg');
+  }
+
+  #surfer{
+    background-image:url('../images/surfer.gallery.jpg');
+  }
+
+  #mountain{
+    background-image:url('../images/mountain.gallery.jpg');
+  }
+
+  #mountain2{
+    background-image:url('../images/mountain2.gallery.jpg');
+  }
+
+  #errorGallery {
+    display: none;
+  }
+}
+
+
+/********************************************************************************
+
+    DEFAULT
+
+********************************************************************************/
+
+#justdef {
+  color:white;
+  button {
+    color:white;
+    background-color:#4e758b;
+    padding:1em;
+    border:1px solid white;
+    &:hover {
+      background-color:none;
+      border:1px solid black;
+      color:black;
+    }
+  }
+  iframe {
+    height:80%;
+  }
+}
+
+/********************************************************************************
+
+    TWITTER
+
+********************************************************************************/
+
+#twitter{
+  background-color: #4bcaff;
+  color:white;
+  .tweet{
+    font-family: "segoelight";
+    font-size: 1.5em;
+  }
+}
+
+
+/********************************************************************************
+
+    WHOIS
+
+********************************************************************************/
+
+
+#whois {
+  background-image: url('../images/photographe.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  padding-top:0;
+  padding-bottom:0;
+
+// lib/images/twitter.logo.png
+
+  .figure {
+    display:inline-block;
+    width:80px;
+    height:80px;
+    padding:1em;
+    margin:.5em;
+    color:rgba(0,0,0,0);
+    border:1px solid white;
+    background: center center no-repeat;
+    &:hover{
+      border:1px solid black;
+    }
+  }
+  #twitterl {
+    background-image: url('../images/twitter.logo.png');
+    &:hover{
+      background-image: url('../images/twitter.logo.black.png');
+    }
+  }
+  #google {
+    background-image: url('../images/google.plus.png');
+    &:hover{
+      background-image: url('../images/google.plus.black.png');
+    }
+  }
+  #cofee{
+    background-image: url('../images/cofee.png');
+    &:hover{
+      background-image: url('../images/cofee.black.png');
+    }
+  }
+  #dribble{
+    background-image: url('../images/dribble.png');
+    &:hover{
+      background-image: url('../images/dribble.black.png');
+    }
+  }
+
+  .element {
+    padding-top:4em;
+    padding-bottom:4em;
+  }
+}
+
+
+/********************************************************************************
+
+    TESTIMONIALS
+
+********************************************************************************/
+
+#testimonials {
+  background-color: white;
+
+  font-family: "segoelight";
+  p {
+    font-size: 1.5em;
+  }
+  .sign {
+    font-size: 1em;
+  }
+  h2 {
+    font-size:2em;
+  }
+}
+
+
+/********************************************************************************
+
+    CONTACT
+
+********************************************************************************/
+
+
+#contact {
+  background-image: url('../images/bruleparfum.contact.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  padding-top:0;
+  padding-bottom:0;
+
+  #mssgResult {
+    font-size:1.5em;
+  }
+
+  .element {
+    padding-top:4em;
+    padding-bottom:4em;
+  }
+
+  label {
+    font-family: "segoebold";
+    text-transform: uppercase;
+    margin-bottom: .5em;
+    color:white;
+  }
+  input {
+    padding:.5em;
+    color:white;
+    width:100%;
+    background-color: #00000000;
+    border: 1px solid white;
+    &:focus, &:hover, &:active{
+      border: 1px solid black;
+    }
+  }
+
+  textarea{
+    padding:.5em;
+    color:white;
+    width:100%;
+    background-color: #00000000;
+    border: 1px solid white;
+    &:focus, &:hover, &:active{
+      border: 1px solid black;
+    }
+  }
+
+  .submit {
+    margin-top:2em;
+    width:100%;
+    padding:1em;
+    font-family: "segoebold";
+    text-transform: uppercase;
+    background-color: #4bcaff;
+    color:white;
+    border:0px solid white;
+  }
+
+  .txtxs{
+    display:none;
+  }
+  .txtlg{
+    display:block;
+  }
+  @media screen and (max-width: 767px) {
+    .txtxs{
+      display:block !important;
+    }
+    .txtlg{
+      display:none !important;
+    }
+  }
+}
+
+
+/********************************************************************************
+
+    FOOTER
+
+********************************************************************************/
+
+
+#footer {
+  background-color: #353f47;
+  padding-top:4em;
+  padding-bottom:4em;
+  .nav-item {
+    color:gray;
+    border:none !important;
+    &:hover{
+      border:none !important;
+      color:#4bcaff !important;
+    }
+  }
+}

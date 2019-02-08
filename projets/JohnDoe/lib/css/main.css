@@ -1,0 +1,240 @@
+
+body {
+    margin:auto;
+    width:1600px;
+    padding:0px;
+    background-color:#282b30;
+    font-family: "Fira Regular";
+    font-size:2em;
+}
+
+#MainWrapper {
+  display:grid;
+  width: 100%;
+  grid-template-columns: 400px 400px 400px 400px;
+  grid-template-rows: 900px 500px 515px 515px 675px auto auto;
+  grid-gap: 0px;
+}
+
+#MainWrapper #header {
+  grid-column: 1 / span 4;
+}
+    #header_image{
+        width:100%;
+    }
+
+    #header_title,#header_image_menu ,#header_image_logo {
+        position: absolute;
+    }
+
+    #header_title {
+        font-family: "Fira Light";
+        font-size:1em;
+        margin-top:-550px;
+        margin-left:200px;
+    }
+
+    #header_title h1 {
+        font-weight: normal;
+        margin-top:0;
+        margin-bottom:0;
+    }
+
+
+#MainWrapper div.spotify,
+#MainWrapper div.itunes,
+#MainWrapper div.skiTextBlue,
+#MainWrapper div.skiRedContenair {
+  padding:80px;
+  font-family: "Fira Light";
+}
+
+#MainWrapper div.spotify h3,
+#MainWrapper div.itunes h3,
+#MainWrapper div.skiTextBlue h3,
+#MainWrapper div.skiRedContenair h3 {
+  margin:0px;
+  font-size:.9em;
+  font-family: "Fira Bold";
+  text-transform: uppercase;
+}
+
+
+
+#MainWrapper div.skiRedImage {
+  grid-column: 1 /span 2;
+}
+#MainWrapper div.skiRedContenair {
+  grid-column: 3 /span 2;
+  background-color:#f2f1ed;
+  padding-right:300px;
+  color:#555;
+}
+
+
+#MainWrapper div#gallery {
+    grid-column: 1 /span 4;
+    display:flex;
+}
+
+#MainWrapper div.skiTextBlue {
+  grid-column: 1 /span 2;
+  background-color:#3e729a;
+  padding-left:300px;
+  color:#fff;
+}
+
+#MainWrapper div.skiImageBlue {
+  grid-column: 3;
+}
+
+#MainWrapper div.skiEmptyBlue {
+  grid-column: 4;
+  background-color:#3e729a;
+}
+
+#MainWrapper div.musicEmptyGray {
+  grid-column: 1;
+  background-color:#282b30;
+}
+#MainWrapper div.musicImageGray {
+  grid-row: 5;
+  grid-column: 2 /span 3;
+}
+
+#MainWrapper div.musicImageGray img{
+  width:1200px;
+}
+#MainWrapper div.musicTextGray h3{
+  font-size:1.2em;
+  font-family: "Fira Bold";
+
+}
+
+#MainWrapper div.musicTextGray h3,
+#MainWrapper div.musicTextGray h4
+{
+  color:#2aba59;
+  text-transform: uppercase;
+  margin:10px;
+}
+
+
+#MainWrapper div.musicTextGray {
+  z-index:1;
+  height:50%;
+  grid-row: 5;
+  grid-column: 2;
+  padding:40px;
+  background-color:#212227;
+  color:white;
+  font-size:.6em;
+  font-family: "Fira Light";
+}
+
+#MainWrapper div.itunes {
+  grid-row: 6;
+  grid-column: 1 /span 2;
+  color:white;
+  background-color:#2fbd59;
+  padding-left:300px;
+}
+
+#MainWrapper div.spotify {
+  grid-row: 6;
+  grid-column: 3 /span 2;
+  color:white;
+  background-color:#282b30;
+  padding-right:300px;
+}
+
+#MainWrapper div.spotify p,
+#MainWrapper div.itunes p,
+#MainWrapper div.skiTextBlue p{
+  color:#ddd;
+}
+
+#MainWrapper div#footer {
+  grid-column: 1 /span 4;
+  background-color:#212227;
+}
+
+footer {
+  margin:80px;
+  color:#aaaaaa;
+  font-size:.5em;
+  font-family: "Fira Light";
+}
+
+footer div {
+  vertical-align: top;
+  display:inline-block;
+}
+
+footer div:first-child {
+  margin-left:220px;
+  width:300px;
+}
+footer div:nth-child(2) {
+  margin-left:30px;
+  width:200px;
+}
+footer div:last-child {
+  margin-left:30px;
+  width:400px;
+}
+
+footer h4 {
+  color:white;
+  font-family: "Fira bold";
+  text-transform: uppercase;
+}
+
+footer a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Fira bold";
+  color:#aaaaaa;
+}
+
+footer input{
+  padding:1em;
+  width:100%;
+  border:none;
+  background-color:gray;
+}
+
+
+.rounded_button {
+    font-size:.7em;
+    padding:.7em;
+    padding-left:1em;
+    padding-right:1em;
+    text-transform: uppercase;
+    font-family: "Fira bold";
+    border:1px solid white;
+    border-radius:1.5em;
+    color:white;
+    letter-spacing: 5px;
+}
+
+.rounded_button_green {
+  font-size:1.1em;
+  padding:.5em;
+  padding-left:1em;
+  padding-right:1em;
+  text-transform: uppercase;
+  font-family: "Fira bold";
+  color:#2aba59;
+  border:1px solid #2aba59;
+  border-radius:1em;
+  letter-spacing: 1px;
+}
+
+.logoSponsor{
+  width:50px;
+  height:50px;
+  padding:1em;
+  margin-right:20px;
+  border:2px solid #aaaaaa;
+}

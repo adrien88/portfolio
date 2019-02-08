@@ -1,0 +1,8 @@
+Police utilisées dans le projet :
+
+FiraSans Regular
+FiraSans Light
+FiraSans Bold
+FiraSans Hair
+FiraSans ExtraBold
+

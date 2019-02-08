@@ -1,0 +1,350 @@
+/********************************************************************************
+    FONT FACE
+********************************************************************************/
+@font-face {
+  font-family: "segoe";
+  src: url("../fonts/segoeui.ttf") format("truetype"); }
+@font-face {
+  font-family: "segoelight";
+  font-style: italic;
+  src: url("../fonts/segoeui.ttf") format("truetype"); }
+@font-face {
+  font-family: "segoebold";
+  font-weight: bolder;
+  src: url("../fonts/segoeui.ttf") format("truetype"); }
+/********************************************************************************
+    GENERIC
+********************************************************************************/
+html {
+  scroll-behavior: smooth; }
+
+body {
+  background-color: #4e758b;
+  font-family: "segoe"; }
+
+h1 {
+  font-family: "segoelight"; }
+
+h2 {
+  font-size: 2em;
+  font-family: "segoelight";
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-bottom: 1.5em; }
+
+section {
+  padding-top: 4em;
+  padding-bottom: 4em; }
+  section:hover h2 {
+    text-decoration: underline; }
+
+.nav-item {
+  padding: .25em;
+  padding-left: .5em;
+  padding-right: .5em;
+  margin-left: .75em;
+  margin-left: .75em; }
+
+.element {
+  width: 100%;
+  color: white;
+  background-color: #515f6880; }
+
+/********************************************************************************
+
+    HEADER
+
+********************************************************************************/
+#header {
+  background-image: url("../images/wheat.jpg");
+  background-attachment: fixed;
+  background-size: cover; }
+  #header div #sitetitle {
+    margin-top: 300px;
+    margin-bottom: 200px; }
+    #header div #sitetitle h1 {
+      text-align: center;
+      line-height: 200%; }
+      #header div #sitetitle h1 span {
+        text-transform: uppercase;
+        padding: .15em;
+        padding-left: .35em;
+        padding-right: .35em;
+        background-color: #353f46dd !important; }
+
+/********************************************************************************
+
+    NAVBAR
+
+********************************************************************************/
+.sectionnavbar {
+  padding-top: 2em;
+  padding-bottom: 2em;
+  background-color: #353f46dd !important; }
+  .sectionnavbar .navbar {
+    padding: 0 !important;
+    background-color: #00000000 !important;
+    color: white !important;
+    display: flex;
+    justify-content: space-between; }
+    .sectionnavbar .navbar .navbar-nav {
+      text-align: center; }
+    .sectionnavbar .navbar h2 {
+      margin: 0; }
+    .sectionnavbar .navbar .nav-item {
+      border: 1px solid #353f4600 !important;
+      text-transform: uppercase; }
+      .sectionnavbar .navbar .nav-item:hover {
+        border: 1px solid #4bcaff !important;
+        color: #4bcaff !important; }
+
+.brand H2 {
+  font-family: "segoebold";
+  font-size: 1.6em; }
+
+/********************************************************************************
+
+    SERVICES
+
+********************************************************************************/
+#services {
+  background-color: #4bcaff;
+  color: white; }
+  #services img {
+    width: 50px;
+    height: 50px; }
+
+/********************************************************************************
+
+    PORTFOLIO
+
+********************************************************************************/
+#portfolio {
+  background-color: white;
+  color: black; }
+  #portfolio .navbar {
+    color: black !important; }
+    #portfolio .navbar .container {
+      padding: 0; }
+    #portfolio .navbar h2 {
+      font-size: 2em !important;
+      font-family: "segoelight" !important; }
+    #portfolio .navbar .nav-item {
+      font-size: 1em !important;
+      text-transform: uppercase !important;
+      border: 1px solid white; }
+      #portfolio .navbar .nav-item:hover {
+        border: 1px solid #4bcaff !important;
+        color: #4bcaff !important;
+        cursor: grabbing; }
+      #portfolio .navbar .nav-item:active {
+        border: 1px solid #4bcaff !important;
+        color: #4bcaff !important; }
+  #portfolio .square {
+    padding: 1em;
+    min-height: 200px;
+    height: 50px; }
+  #portfolio .hiddenKeyword {
+    display: none; }
+  #portfolio .img {
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    transition: 1s background-size;
+    background-size: cover; }
+    #portfolio .img img {
+      display: none; }
+    #portfolio .img .grayhover {
+      transition: 1s all;
+      background-color: #00000000; }
+    #portfolio .img:hover {
+      background-size: cover;
+      transition: 1s background-size;
+      background-size: 200%; }
+      #portfolio .img:hover .grayhover {
+        background-color: #000000aa;
+        transition: 1s all;
+        width: 100%;
+        height: 100%; }
+      #portfolio .img:hover img {
+        display: block; }
+  #portfolio #bridge {
+    background-image: url("../images/bridge.gallery.jpg"); }
+  #portfolio #GoldenGateSmog {
+    background-image: url("../images/GoldenGateSmog.gallery.jpg"); }
+  #portfolio #seaSmog {
+    background-image: url("../images/seaSmog.gallery.jpg"); }
+  #portfolio #seaRiver {
+    background-image: url("../images/seaRiver.gallery.jpg"); }
+  #portfolio #woodenHouse {
+    background-image: url("../images/woodenHouse.gallery.jpg"); }
+  #portfolio #surfer {
+    background-image: url("../images/surfer.gallery.jpg"); }
+  #portfolio #mountain {
+    background-image: url("../images/mountain.gallery.jpg"); }
+  #portfolio #mountain2 {
+    background-image: url("../images/mountain2.gallery.jpg"); }
+  #portfolio #errorGallery {
+    display: none; }
+
+/********************************************************************************
+
+    DEFAULT
+
+********************************************************************************/
+#justdef {
+  color: white; }
+  #justdef button {
+    color: white;
+    background-color: #4e758b;
+    padding: 1em;
+    border: 1px solid white; }
+    #justdef button:hover {
+      background-color: none;
+      border: 1px solid black;
+      color: black; }
+  #justdef iframe {
+    height: 80%; }
+
+/********************************************************************************
+
+    TWITTER
+
+********************************************************************************/
+#twitter {
+  background-color: #4bcaff;
+  color: white; }
+  #twitter .tweet {
+    font-family: "segoelight";
+    font-size: 1.5em; }
+
+/********************************************************************************
+
+    WHOIS
+
+********************************************************************************/
+#whois {
+  background-image: url("../images/photographe.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  padding-top: 0;
+  padding-bottom: 0; }
+  #whois .figure {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    padding: 1em;
+    margin: .5em;
+    color: transparent;
+    border: 1px solid white;
+    background: center center no-repeat; }
+    #whois .figure:hover {
+      border: 1px solid black; }
+  #whois #twitterl {
+    background-image: url("../images/twitter.logo.png"); }
+    #whois #twitterl:hover {
+      background-image: url("../images/twitter.logo.black.png"); }
+  #whois #google {
+    background-image: url("../images/google.plus.png"); }
+    #whois #google:hover {
+      background-image: url("../images/google.plus.black.png"); }
+  #whois #cofee {
+    background-image: url("../images/cofee.png"); }
+    #whois #cofee:hover {
+      background-image: url("../images/cofee.black.png"); }
+  #whois #dribble {
+    background-image: url("../images/dribble.png"); }
+    #whois #dribble:hover {
+      background-image: url("../images/dribble.black.png"); }
+  #whois .element {
+    padding-top: 4em;
+    padding-bottom: 4em; }
+
+/********************************************************************************
+
+    TESTIMONIALS
+
+********************************************************************************/
+#testimonials {
+  background-color: white;
+  font-family: "segoelight"; }
+  #testimonials p {
+    font-size: 1.5em; }
+  #testimonials .sign {
+    font-size: 1em; }
+  #testimonials h2 {
+    font-size: 2em; }
+
+/********************************************************************************
+
+    CONTACT
+
+********************************************************************************/
+#contact {
+  background-image: url("../images/bruleparfum.contact.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  padding-top: 0;
+  padding-bottom: 0; }
+  #contact #mssgResult {
+    font-size: 1.5em; }
+  #contact .element {
+    padding-top: 4em;
+    padding-bottom: 4em; }
+  #contact label {
+    font-family: "segoebold";
+    text-transform: uppercase;
+    margin-bottom: .5em;
+    color: white; }
+  #contact input {
+    padding: .5em;
+    color: white;
+    width: 100%;
+    background-color: #00000000;
+    border: 1px solid white; }
+    #contact input:focus, #contact input:hover, #contact input:active {
+      border: 1px solid black; }
+  #contact textarea {
+    padding: .5em;
+    color: white;
+    width: 100%;
+    background-color: #00000000;
+    border: 1px solid white; }
+    #contact textarea:focus, #contact textarea:hover, #contact textarea:active {
+      border: 1px solid black; }
+  #contact .submit {
+    margin-top: 2em;
+    width: 100%;
+    padding: 1em;
+    font-family: "segoebold";
+    text-transform: uppercase;
+    background-color: #4bcaff;
+    color: white;
+    border: 0px solid white; }
+  #contact .txtxs {
+    display: none; }
+  #contact .txtlg {
+    display: block; }
+  @media screen and (max-width: 767px) {
+    #contact .txtxs {
+      display: block !important; }
+    #contact .txtlg {
+      display: none !important; } }
+
+/********************************************************************************
+
+    FOOTER
+
+********************************************************************************/
+#footer {
+  background-color: #353f47;
+  padding-top: 4em;
+  padding-bottom: 4em; }
+  #footer .nav-item {
+    color: gray;
+    border: none !important; }
+    #footer .nav-item:hover {
+      border: none !important;
+      color: #4bcaff !important; }
+
+/*# sourceMappingURL=core.css.map */

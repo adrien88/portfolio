@@ -1,0 +1,441 @@
+
+@font-face {
+  font-family: "georgia";
+  src:url("fonts/georgia.ttf");
+}
+
+body {
+  background-image:url(images/image-header.jpg);
+  background-attachment:fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*----------------------------------------------------- NAVBAR ---------------------------------------------------*/
+.navbar {
+  padding-top:0px;
+  /* position: fixed; */
+}
+
+header .container-fluid:first-child {
+  background-image: linear-gradient(to top,rgba(0,0,0,0),rgba(0,0,0,0.5));
+}
+
+.navbar-brand /*logo lambda*/
+{
+    display: inline;
+    text-transform: uppercase;
+    font-family: 'Yeseva One', cursive;
+    font-size: 2em;
+    padding-top: 12px;
+    color: black;
+    background-image:url(images/logo.png);
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+#navbarTogglerDemo02 /*navbar*/
+{
+  display: inline;
+    list-style-type: none;
+  background-color: none;
+    float: right;
+     padding: 14px 30px;
+     padding-top:0px;
+    text-align: center;
+ }
+
+.nav-link /*elements de la navbar*/
+{
+    display: inline;
+    font-family: 'Gentium Book Basic', serif;
+    font-weight: bold;
+    font-size: 21px;
+    color: white !important;
+    margin: 15px;
+    margin-top:0px;
+    padding-top:15px;
+}
+
+#twitter, #facebook, #youtube
+{
+    color: #cc9900;
+    padding: 10px;
+
+}
+
+.nav-link:hover
+{
+    border-top: solid white 2px;
+}
+
+.nav-link:active
+{
+    background-color: grey;
+        opacity: 0.5;
+}
+
+/* ------------------------------------------ PROMO ------------------------------------------------*/
+
+header
+{
+    background-size: cover;
+    /* background-image:url(images/image-header.jpg); */
+    background-repeat: no-repeat;
+}
+
+h1
+{
+    color: white;
+    font-size: 6em;
+    font-family: 'yeseva one', cursive;
+    text-align: center;
+}
+
+.promo
+{
+    text-align: center;
+    padding-top: 50px;
+
+    min-height: 640px;
+    }
+
+.promo a
+{
+    text-decoration: none;
+    color: white;
+}
+
+#divider_1
+{
+    width: 230px;
+}
+.headerbutton
+{
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    margin: 10px;
+}
+
+.blackbutton
+{
+    background-color: RGBa(0,0,0,0.4);
+}
+.blackbutton:hover
+{
+    background-color: RGBa(0,0,0,0.5);
+}
+
+.whitebutton{
+    background-color: RGBa(250,250,250,0.4);
+}
+.whitebutton:hover{
+    background-color:RGBa(250,250,250,0.5);
+}
+
+
+/*------------------------------------------------SECTION ABOUT--------------------------------------------*/
+
+h2
+{
+    font-family: 'yeseva one', cursive;
+    font-size: 36px;
+    color: #cc9900;
+    text-align: center;
+}
+
+.divider
+{
+    width: 230px;
+    margin-bottom: 15px;
+ }
+
+#about
+{
+    text-align: center;
+}
+
+#about p
+{
+    font-family: 'lato', sans-serif;
+    font-size: 16px;
+    color: black;
+    text-align: center;
+    margin-bottom:50px;
+}
+
+#about .col-md-4
+{
+    padding-top: 84px;
+
+}
+
+#about .col-md-7
+{
+        padding-top: 84px;
+}
+
+#about
+{
+        background-color:#eee;
+        background-image: url(images/pattern2.png);
+        background-repeat: repeat;
+}
+
+/*---------------------------------------------------------- SECTION INGREDIENTS -------------------------------------------------------------*/
+
+#ingredients
+{
+    text-align: center;
+    background-image:url(images/basilic.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    padding-top: 84px;
+}
+
+#square
+{
+    background-color: RGBa(0, 0, 0, 0.5);
+    width: 570px;
+    padding: 70px;
+}
+
+#square p
+{
+    color: white;
+}
+
+#square h2
+{
+    color: white;
+    font-family: 'yeseva one', cursive;
+    font-size: 36px;
+}
+
+#hiddentext
+{
+  /**/
+    position: absolute;
+    background-color: rgba(0,0,0,0.8);
+    margin-top:-8em;
+    margin-left:-70px;
+    width:100%;
+  /* */
+  color: white;
+  list-style: none;
+  display: none;
+  font-family: 'lato regular', sans-serif;
+  font size: 16px;
+  transition: 1s all;
+}
+#hiddentext:hover{
+  display: block;
+}
+
+#image1:hover ~ #hiddentext,
+#image2:hover ~ #hiddentext,
+#image3:hover ~ #hiddentext
+{
+    display: block;
+    transition: 1s all;
+}
+
+
+#image1,#image2,#image3
+{
+margin: 15px;
+}
+
+
+/* -----------------------------------------------------------------------------------------------------
+
+
+*/
+
+
+h2, h3, h4 {
+  font-family: 'Yeseva One', cursive;
+  color:#cc9900;
+}
+p {
+  font-family: 'Lato', sans-serif;
+  color:black;
+}
+
+section {
+  padding-left:11%;
+  padding-right:11%;
+  padding-top:5%;
+  padding-bottom:5%;
+}
+
+footer {
+  background-color:#191919;
+  padding-top:5%;
+  text-align:center;
+}
+
+footer * {
+  color:white;
+}
+
+
+#reviews{
+  text-align:center;
+  background:url("images/bckgdReviews.jpg");
+  background-size:cover;
+  background-position: center center;
+}
+
+#reviews * {
+  color:white;
+}
+
+#reviews #textblock {
+  padding:3em;
+  background-color:rgba(0,0,0,0.8);
+}
+
+#reviews #textblock p.first {
+  font-family: 'Gentium Book Basic';
+  line-height: 2em;
+  font-weight: bold;
+}
+
+#reviews #textblock p.sign {
+  font-weight:normal;
+}
+
+
+#reviews .divider {
+  width:230px;
+}
+
+#reviews #textblock p.first::before {
+  font-size:4.5em;
+  margin-left:-.5em;
+  margin-top:-0em;
+  content:'“';
+  position:absolute;
+  opacity:0.5;
+  font-family: 'georgia';
+}
+
+
+
+
+#menu .price {
+  float:right;
+}
+#menu ul li {
+  list-style: none;
+}
+#menu ul li.normal {
+    padding:.5em;
+    border:1px solid rgba(0,0,0,0);
+}
+#menu ul li.special {
+    padding:.5em;
+    border:1px solid #cc9900;
+}
+
+#menu ul li.specialBadge {
+    text-align:right;
+}
+#menu ul li.specialBadge p {
+  margin-bottom:0px;
+  padding:.05em;
+  padding-right:.5em;
+  padding-left:.5em;
+  display:inline-block;
+  color:white;
+  background-color:#cc9900;
+}
+
+#menu hr {
+  border-color:#cc9900;
+}
+#menu {
+  background-color:#eee;
+  background-image: url('images/pattern.png');
+  background-repeat: repeat;
+}
+#reservations {
+  background-color:#eee;
+  background-image: url('images/pattern2.png');
+  background-repeat: repeat;
+}
+
+#reservations td {
+  text-align: left;
+  padding:.5em;
+}
+
+#reservations label {
+  font-weight: bold;
+  color:#cc9900;
+  margin:0em;
+}
+#reservations tr:last-child td:last-child {the right ingredients
+  text-align: center;
+}
+
+#reservations input.form-control{
+  font-style:italic;
+  border-radius:0px;
+  background-color:rgba(255,255,255,0.8);
+  border:1px solid rgba(175,175,175,0.8);
+}
+#reservations select.form-control{
+  font-style:italic;
+  border-radius:0px;
+  background-color:rgba(255,255,255,0.8);
+  border:1px solid rgba(175,175,175,0.8);
+}
+
+
+#reservations input.form-control:focus{
+  box-shadow:none;
+  font-style:inherit;
+  border:1px solid #cc9900;
+}
+#reservations select.form-control:focus{
+  font-style:inherit;
+  box-shadow:none;
+  border:1px solid #cc9900;
+}
+
+#reservations input[type="submit"]{
+  border-radius:0px;
+  border:none;
+  width:50%;
+  color:white;
+  background-color:#cc9900;
+}
+
+#reservations #textform{
+  text-align:center;
+}
+
+
+#reservations .fa-calendar-alt {
+  position: absolute;
+  margin-top:-1.8em;
+  margin-left:10em;
+  color:gray;
+}
+
+
+@media screen and (max-width:650px){
+  h1{
+    font-size: 3em;
+  }
+}

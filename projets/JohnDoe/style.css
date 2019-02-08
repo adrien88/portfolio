@@ -1,0 +1,121 @@
+/* A supprimer : le temps de la construction*/
+body {
+  background:white
+}
+
+.container {
+  background:white
+  padding:0px;
+}
+
+h2, h3, h4 {
+  font-family: 'Yeseva One', cursive;
+  color:#cc9900;
+}
+p {
+  font-family: 'Lato', sans-serif;
+  color:black;
+}
+
+section {
+  padding-left:11%;
+  padding-right:11%;
+  padding-top:5%;
+  padding-bottom:5%;
+}
+
+footer {
+  background-color:#191919;
+  padding-top:5%;
+  text-align:center;
+}
+
+footer * {
+  color:white;
+}
+
+#reviews{
+  text-align:center;
+  background:url("../images/bckgdReviews.jpg");
+  background-position:cover;
+}
+
+#reviews * {
+  color:white;
+}
+
+#reviews #textblock {
+  background-color:rgba(0,0,0,0.8);
+}
+
+#menu .price {
+  float:right;
+}
+#menu ul li {
+  list-style: none;
+}
+#menu ul li.normal {
+    padding:.5em;
+    border:1px solid rgba(0,0,0,0);
+}
+#menu ul li.special {
+    padding:.5em;
+    border:1px solid #cc9900;
+}
+#menu ul li.specialBadge {
+    text-align:right;
+}
+#menu ul li.specialBadge p {
+  margin-bottom:0px;
+  padding:.05em;
+  padding-right:.5em;
+  padding-left:.5em;
+  display:inline-block;
+  color:white;
+  background-color:#cc9900;
+}
+#menu hr {
+  border-color:#cc9900;
+}
+#menu {
+  background-color:#eee;
+  background-image: url('images/pattern.png');
+  background-repeat: repeat;
+}
+
+#reservations {
+  background-color:#eee;
+  background-image: url('images/pattern2.png');
+  background-repeat: repeat;
+}
+#reservations td {
+  padding:.5em;
+}
+#reservations label {
+  margin:0em;
+}
+#reservations tr:last-child td:last-child {
+  text-align: center;
+}
+
+#reservations input.form-control{
+  background-color:rgba(255,255,255,0.8);
+  border:1px solid gray;
+}
+#reservations input.form-control:focus{
+  box-shadow:none;
+  border:1px solid #cc9900;
+}
+#reservations input[type="submit"]{
+  border:none;
+  width:50%;
+  color:white;
+  background-color:#cc9900;
+}
+
+#reservations .fa-calendar-alt {
+  position: absolute;
+  margin-top:-1.8em;
+  margin-left:10em;
+  color:gray;
+}

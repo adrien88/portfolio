@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body >
+    <div id="background" >
+
+    <header class="container-fluid">
+        <div class="container" id="header-container">
+            <div class="row justify-content-center">
+                <div class="col-xs-3 col-sm-3 text-center ">
+                    <img src="img/logo_gauche.png" class="img-fluid" alt="logo gauche">
+
+                </div>
+                <div class="col-xs-6 col-sm-6 text-center ">
+                    <h1>LE JUSTE PRIX </h1>
+                </div>
+                <div class="col-xs-3 col-sm-3 text-center">
+                  <img src="img/logo_droite.png" class="img-fluid" alt="logo droite" width="250px" height="100px">
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="container-fluid">
+        <div class="container">
+
+            <div class="row">
+                <aside id="regles" class="col-12 ">
+                    <p> Devinez le nombre magique compris entre 1 et 99 ! <br> Vous avez 10 essais ! Bonne chance ! </p>
+                </aside>
+            </div>
+
+            <div class="row justify-content-center" id="resultat-input">
+
+                <div id="computer" class="col-xs-12 col-sm-12 col-md-8 col-lg-6">
+                    <div id="resultat">
+                        <ul id="liste">
+                        </ul>
+                    </div>
+                  <img src="img/laptop-bottom.png" id="laptop-bottom" alt="bas ordinateur" class="img-fluid ">
+                </div>
+
+                <div class=" col-xs-12 col-sm-8 col-md-4 col-lg-4  ">
+                  <form id="form" >
+                      <!--<label for="fname">Entrez un nombre</label><br>-->
+                      <input type="text" id="saisie" name="fname" placeholder="Entrez un nombre">
+                      <input id="submit" type="submit" value="essayer">
+                      <input onclick="refresh()" id="rejouer" value="rejouer">
+                  </form>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="container-fluid"></footer>
+
+    <script src="js/core.1.0.js"></script>
+    </div>
+
+</body>
+
+</html>

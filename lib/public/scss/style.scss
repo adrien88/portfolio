@@ -1,0 +1,291 @@
+
+/* ----------------------------------------------------------------------------------------------
+    FONT FACE DEFININF
+
+---------------------------------------------------------------------------------------------- */
+@font-face {
+  font-family:'Roboto';
+  src:url('../fonts/roboto/Roboto-Regular.ttf');
+}
+@font-face {
+  font-family:'RobotoLight';
+  src:url('../fonts/roboto/Roboto-Light.ttf');
+}
+@font-face {
+  font-family:'RobotoBold';
+  src:url('../fonts/roboto/Roboto-Bold.ttf');
+}
+
+/* ----------------------------------------------------------------------------------------------
+  START OF BODY
+---------------------------------------------------------------------------------------------- */
+body{
+  scroll-behavior: smooth;
+  font-family:'Roboto';
+  background-color:black;
+  color:white;
+
+  p, li, a {
+    color:white;
+    font-family:'RobotoLight';
+    font-size: 1.1em;
+    font-weight: normal;
+    &:hover{
+      color:white;
+    }
+  }
+
+  h1, h2 {
+    font-family:'RobotoBold';
+    font-size: 1.4em;
+  }
+  h1 {
+    font-size: 2.2em;
+  }
+
+  header, footer {
+    background-image:url("../medias/cute-owl-wallpaper.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+
+    div {
+      background-color:rgba(0,0,0,0.5);
+      color:white;
+      padding:1em;
+    }
+    .content{
+      height:100%;
+    }
+  }
+
+  header {
+
+    p{
+      margin-left:2em;
+      font-family:'Roboto';
+    }
+
+    .technoUsed{
+      display:inline-block;
+      padding:.5em;
+      i {font-size:1.2em}
+    }
+
+    #t-html i {color:orange;}
+    #t-css i {color:steelblue;}
+    #t-js i {color:gold;}
+    #t-php i {color:purple;}
+    #t-sql i {color:cyan;}
+
+  }
+
+  .row {
+    padding:0;
+  }
+
+  .navbar{
+    ul{
+      li{
+        // margin-right:1em;
+        a {
+          text-decoration: none;
+          color: gray;
+          &:hover {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+
+  .h2-title {
+    background-color:black;
+    color:white;
+    padding:.5em;
+    width:100%;
+    h2 {
+      font-family:'RobotoLight';
+      font-size:2em;
+      margin:0px;
+      padding:0px;
+      padding-left:2em;
+      text-transform:uppercase;
+    }
+  }
+
+  section {
+  min-height:100vh;
+  background-image: linear-gradient(45deg, black,gray);
+
+
+  // overflow-y: scroll;
+    div.lat-translate {
+      background-color:rgba(255,255,255,0.8);
+      color:black;
+      padding:2em;
+      ul {
+        li {
+          list-style: none;
+          display:inline-block;
+          a {
+            display:block;
+            font-family:'Roboto';
+            color:black;
+            padding:.25em;
+            margin:.5em;
+            border:2px solid #88a;
+            // border-radius:1em;
+            &:hover{
+              color: white;
+              text-decoration:none;
+              background-image:linear-gradient(to top, #88a, #aac);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    .h2-title{
+      text-align: center;
+      letter-spacing: .25em;
+    }
+    div {
+      padding-top:1em;
+    }
+
+    ul {
+      padding-left: 0em;
+      li {
+        list-style: none;
+      }
+      a {
+        color:#ccc;
+      }
+      li {
+          &:hover {
+          a {
+            color:white;
+          }
+        }
+      }
+    }
+  }
+
+  /* ----------------------------------------------------------------------------------------------
+  SuperEFFECT
+  ---------------------------------------------------------------------------------------------- */
+
+    div#newAnim {
+      padding:0px !important;
+
+      a {
+        // projet thumbnail theme
+        .projet_thumbnail {
+          background-size: cover;
+          background-position: center center;
+
+          .zoneTexte{
+            margin:0px;
+            padding:0px;
+            background-color:rgba(0,0,0,0.9);
+            transition:1s background;
+
+            h3 {
+              margin:0px;
+              padding:1em;
+              padding-top:6em;
+              font-weight:bolder;
+              display:inline-block;
+              background-color:black;
+              color:white;
+              transition:1s all;
+              transform: rotate(-90deg);
+              // border-radius:2em;
+            }
+
+            &:hover {
+              background-color:rgba(0,0,0,0.2);
+              transition:1s background;
+
+              h3{
+                background-color:white;
+                color:black;
+                padding-top:12em;
+                padding-bottom:2em;
+                transition:1s all;
+                transform: rotate(0deg);
+              }
+              padding:2em;
+
+            }//h3
+
+          }//zone de texte
+        } // end of thumbnais projets
+
+      }
+
+    }
+}
+/* ----------------------------------------------------------------------------------------------
+MEDIA QUERIES
+Responsives elements
+---------------------------------------------------------------------------------------------- */
+
+@media screen and (max-width : 574px) {
+  article div {
+    margin-top:10%;
+    margin-bottom:10%;
+    margin-left: 0%;
+    width: 100%;
+  }
+  article:hover > div {
+    margin-left: 0%;
+  }
+}
+
+@media screen and (min-width : 575px) and (max-width : 1024px) {
+  .animated div {
+    background-color:rgba(250,250,250,0.5) !important;
+    margin-left: 10%;
+    transition:1s all;
+    width: 80%;
+  }
+  .animated:hover > div {
+    background-color:rgba(255,255,255,0.9) !important;
+    margin-left: 5%;
+    transition:1s all;
+  }
+}
+
+@media screen and (min-width : 1025px) {
+
+  .animated div {
+    opacity:.5 !important;
+    margin-left: 5%;
+    transition:1s all;
+    width: 50%;
+  }
+  .animated:hover > div {
+    opacity:1 !important;
+    margin-left: 10%;
+    transition:1s all;
+  }
+
+  .animated div.reverse {
+    margin-left: 15%;
+    transition:1s all;
+  }
+  .animated:hover > div.reverse {
+    margin-left: 10%;
+  }
+  .animated div ul a {
+    opacity:0;
+    transition:.5s opacity .5s;
+  }
+  .animated:hover ul a {
+    opacity:1;
+    transition:.25s opacity .25s;
+  }
+}
