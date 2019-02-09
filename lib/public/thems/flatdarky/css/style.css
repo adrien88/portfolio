@@ -17,8 +17,8 @@
 body {
   scroll-behavior: smooth;
   font-family: 'Roboto';
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
   /* ----------------------------------------------------------------------------------------------
   SuperEFFECT
   ---------------------------------------------------------------------------------------------- */ }
@@ -34,11 +34,11 @@ body {
     font-size: 1.4em; }
   body h1 {
     font-size: 2.2em; }
-  body header, body footer {
-    background-image: url("../medias/cute-owl-wallpaper.jpg");
-    background-attachment: fixed;
-    background-size: cover; }
-    body header div, body footer div {
+  body header, body footer, body main {
+    background-color: lightgreen;
+    background-size: cover;
+    background-attachment: fixed; }
+    body header section, body footer section, body main section {
       background-color: rgba(0, 0, 0, 0.5);
       color: white;
       padding: 1em; }
@@ -62,43 +62,24 @@ body {
     color: cyan; }
   body .row {
     padding: 0; }
-  body .navbar ul li a {
-    text-decoration: none;
-    color: gray; }
-    body .navbar ul li a:hover {
-      color: white; }
+  body div.navbarBase {
+    background-color: gray; }
+    body div.navbarBase div.navbarbg {
+      background-color: gray; }
+      body div.navbarBase div.navbarbg nav#navbar ul li a {
+        text-decoration: none;
+        color: gray; }
+        body div.navbarBase div.navbarbg nav#navbar ul li a:hover {
+          color: white; }
   body .h2-title {
     background-color: black;
     color: white;
     padding: .5em;
-    width: 100%; }
-    body .h2-title h2 {
-      font-family: 'RobotoLight';
-      font-size: 2em;
-      margin: 0px;
-      padding: 0px;
-      padding-left: 2em;
-      text-transform: uppercase; }
-  body section {
-    background-image: linear-gradient(45deg, black, gray); }
-    body section div.lat-translate {
-      background-color: rgba(255, 255, 255, 0.8);
-      color: black;
-      padding: 2em; }
-      body section div.lat-translate ul li {
-        list-style: none;
-        display: inline-block; }
-        body section div.lat-translate ul li a {
-          display: block;
-          font-family: 'Roboto';
-          color: black;
-          padding: .25em;
-          margin: .5em;
-          border: 2px solid #88a; }
-          body section div.lat-translate ul li a:hover {
-            color: white;
-            text-decoration: none;
-            background-image: linear-gradient(to top, #88a, #aac); }
+    width: 100%;
+    font-family: 'RobotoLight';
+    text-transform: uppercase; }
+  body section article, body section aside {
+    padding: 1em; }
   body footer .h2-title {
     text-align: center;
     letter-spacing: .25em; }
@@ -148,51 +129,5 @@ body {
 MEDIA QUERIES
 Responsives elements
 ---------------------------------------------------------------------------------------------- */
-@media screen and (max-width: 574px) {
-  article div {
-    margin-top: 10%;
-    margin-bottom: 10%;
-    margin-left: 0%;
-    width: 100%; }
-
-  article:hover > div {
-    margin-left: 0%; } }
-@media screen and (min-width: 575px) and (max-width: 1024px) {
-  .animated div {
-    background-color: rgba(250, 250, 250, 0.5) !important;
-    margin-left: 10%;
-    transition: 1s all;
-    width: 80%; }
-
-  .animated:hover > div {
-    background-color: rgba(255, 255, 255, 0.9) !important;
-    margin-left: 5%;
-    transition: 1s all; } }
-@media screen and (min-width: 1025px) {
-  .animated div {
-    opacity: .5 !important;
-    margin-left: 5%;
-    transition: 1s all;
-    width: 50%; }
-
-  .animated:hover > div {
-    opacity: 1 !important;
-    margin-left: 10%;
-    transition: 1s all; }
-
-  .animated div.reverse {
-    margin-left: 15%;
-    transition: 1s all; }
-
-  .animated:hover > div.reverse {
-    margin-left: 10%; }
-
-  .animated div ul a {
-    opacity: 0;
-    transition: .5s opacity .5s; }
-
-  .animated:hover ul a {
-    opacity: 1;
-    transition: .25s opacity .25s; } }
 
 /*# sourceMappingURL=style.css.map */

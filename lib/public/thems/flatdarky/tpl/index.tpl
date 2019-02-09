@@ -15,27 +15,31 @@
     <meta property="og:image" content="https://boilley.info/other/OnlineFormaPro/portfolio2/lib/medias/cute-owl-wallpaper.jpg" />
 
     $metaog
-    $stylesheet
 
     <link rel="stylesheet" href="lib/public/bootstrap_4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link rel="stylesheet" href="lib/public/thems/flatdarky/css/style.css">
+
+    $stylesheet
+
+
   </head>
 
   <body>
-    <nav>
-      $nav
-    </nav>
 
-    <header id="header">
+    <div class="container-fluid navbarBase">
+      $nav
+    </div>
+
+    <header class="container-fluid" id="header" style="background-image:url($header_bg);">
       $header
     </header>
 
-    <main id="main">
+    <main class="container-fluid" id="main">
       $main
     </main>
 
-    <footer id="footer">
+    <footer class="container-fluid" id="footer" style="background-image:url($header_bg);">
       $footer
     </footer>
 

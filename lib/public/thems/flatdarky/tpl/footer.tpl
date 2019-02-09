@@ -1,12 +1,12 @@
-<div class="row">
+<section class="row">
   <div class="container">
     <div class="col-12 h2-title" id="title-footer">
       <h2>Boilley Adrien © 2018</h2>
     </div>
   </div>
-</div>
+</section>
 
-<div class="row content">
+<section class="row content">
   <div class="container">
     <div class="row">
       <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
@@ -38,4 +38,4 @@
       </div>
     </div>
   </div>
-</div>
+</section>

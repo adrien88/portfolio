@@ -51,7 +51,6 @@
   // print_r($PATH);
   $addTPL = [
     'title'=>$PATH['page'].' | '.$CONFIG['sitetitle'],
-    'docRoot'=>$PATH['docRoot']
   ];
   $TPL=array_merge($TPL,$addTPL);
   // echo '>>'.$PATH['docRoot'];
