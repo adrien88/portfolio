@@ -76,16 +76,17 @@ body{
     #t-sql i {color:cyan;}
 
   }
-
-  .row {
-    padding:0;
-  }
+  //
+  // .row {
+  //   padding:0;
+  // }
 
   div.navbarBase {
     background-color: gray;
-    div.navbarbg {
+    div.row {
       background-color: gray;
       nav#navbar{
+        background-color: gray;
         ul{
           li{
             // margin-right:1em;

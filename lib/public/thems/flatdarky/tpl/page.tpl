@@ -1,6 +1,6 @@
 
 <section class="row">
   <article class="container">
-    $main_content
+    $content
   </article>
 </section>

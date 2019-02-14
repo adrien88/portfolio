@@ -22,6 +22,23 @@ class page extends pageManager {
     return $listpage;
   }
 
+  // formualire de page avec option de pré-remplissage
+  public function form_page(array $data = []){
+
+    $form = '';
+    $form = file_get_content('lib/public/tpl/form_page.tpl');
+    $form = parser::parserHTML($form,$data,['clean'=>true]);
+
+    $addTPL = [
+      'main'=>'page.tpl',
+      'title'=>'Login',
+      'thumbnail'=>'lib/public/thems/flatdarky/medias/blueasy.header.jpg',
+      'description'=>'Connexion utilisateur',
+      'content'=>$form
+    ];
+    return $addTPL;
+  }
+
 }
 
 ?>

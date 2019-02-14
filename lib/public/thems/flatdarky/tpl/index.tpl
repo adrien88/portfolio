@@ -28,19 +28,19 @@
   <body>
 
     <div class="container-fluid navbarBase">
-      $nav
+      %nav.tpl
     </div>
 
-    <header class="container-fluid" id="header" style="background-image:url($header_bg);">
-      $header
+    <header class="container-fluid" id="header" style='background-image:url("$thumbnail");'>
+      %header.tpl
     </header>
 
     <main class="container-fluid" id="main">
-      $main
+      %page.tpl
     </main>
 
-    <footer class="container-fluid" id="footer" style="background-image:url($header_bg);">
-      $footer
+    <footer class="container-fluid" id="footer" style='background-image:url("$thumbnail");'>
+      %footer.tpl
     </footer>
 
     <script src="lib/public/thems/flatdarky/js/style.js"></script>

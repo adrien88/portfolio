@@ -60,17 +60,17 @@ body {
     color: purple; }
   body header #t-sql i {
     color: cyan; }
-  body .row {
-    padding: 0; }
   body div.navbarBase {
     background-color: gray; }
-    body div.navbarBase div.navbarbg {
+    body div.navbarBase div.row {
       background-color: gray; }
-      body div.navbarBase div.navbarbg nav#navbar ul li a {
-        text-decoration: none;
-        color: gray; }
-        body div.navbarBase div.navbarbg nav#navbar ul li a:hover {
-          color: white; }
+      body div.navbarBase div.row nav#navbar {
+        background-color: gray; }
+        body div.navbarBase div.row nav#navbar ul li a {
+          text-decoration: none;
+          color: gray; }
+          body div.navbarBase div.row nav#navbar ul li a:hover {
+            color: white; }
   body .h2-title {
     background-color: black;
     color: white;

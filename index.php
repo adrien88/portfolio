@@ -40,7 +40,8 @@
 
   // GENERATE MENU
   $addTPL = [
-    'navbar_pages'=>$page->BootstrapMenu()
+    'navbar_pages'=>$page->BootstrapMenu(),
+    'dropdown_user'=>$USER->dropdown_user()
   ];
   $TPL=array_merge($TPL,$addTPL);
 
@@ -70,23 +71,25 @@
   /*
       Create content
   */
-
   $data = $page->getByUrl($PATH['page']);
+  // test saved page
   if($data !== false){
     $addTPL = [
-      'main'=>'page.tpl',
-      'header_title'=>$data['title'],
-      'header_desc'=>$data['description'],
-      'header_bg'=>$data['picture'],
-      'main_dpub'=>$data['dpub'],
-      'main_content'=>$data['content']
+      'main'=>'page.tpl'
     ];
-
-  } else{
+    $addTPL=array_merge($addTPL,$data);
+  }
+  // test statics pasgge
+  elseif(file_exists('lib/public/pages/'.$PATH['page'])){
+    include 'lib/public/pages/'.$PATH['page'];
+  }
+  // Send error
+  else{
     $addTPL = [
-      'main'=>'main.tpl',
-      'main_title'=>'Erreur :',
-      'main_content'=>'Cette page n\'éxiste pas.'
+      'main'=>'page.tpl',
+      'title'=>'Erreur',
+      'descritption'=>'Ce contenu n\'existe pas.',
+      'content'=>'La page n\'éxiste pas, à été mise hors ligne, déplacée ou supprimée.'
     ];
   }
 
@@ -97,7 +100,6 @@
   // }
   $TPL=array_merge($TPL,$addTPL);
 
-
   $opts = [
     'clean'=>true,
     'recursive'=>true
@@ -107,7 +109,7 @@
       Build page
   */
   // $tpl = file_get_contents();
-  echo parser::auto($THEM.'/tpl/index.tpl',$TPL,$opts);
+  echo parser::auto($THEM.'/tpl/',$TPL,$opts);
 
 
  ?>

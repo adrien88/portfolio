@@ -1,6 +1,7 @@
 <?php
 
 class pageManager {
+
   /*
       GET page from urls
   */
@@ -21,6 +22,20 @@ class pageManager {
   public function getUrls(){
     global $PDO;
     $req='SELECT url,title FROM pages ;';
+    $stat=$PDO->prepare($req);
+    $stat->execute();
+    if($stat!==false){
+      return $stat->fetchAll();
+    }
+    return false;
+  }
+
+  /*
+      GET meta
+  */
+  public function getAllMetas(){
+    global $PDO;
+    $req='SELECT url,title,description,thumbnail,publication FROM pages ;';
     $stat=$PDO->prepare($req);
     $stat->execute();
     if($stat!==false){
