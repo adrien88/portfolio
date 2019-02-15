@@ -3,9 +3,21 @@
   ini_set('display_errors','1');
 
   /*
-      load config
+  Autoloading of PHP class
+  */
+  spl_autoload_register(function ($class) {
+    include 'lib/controler/'.$class.'.class.php';
+  });
+
+  /*
+    load config
   */
   $CONFIG = parse_ini_file('config.ini',1)['site'];
+  /*
+    load config
+  */
+  minifier::auto();
+
   /*
       defaut render
   */
@@ -14,9 +26,7 @@
     'charset'=>$CONFIG['charset'],
     'title'=>$CONFIG['sitetitle'],
     'description'=>$CONFIG['sitedescription'],
-    'nav'=>'navbar.tpl',
-    'header'=>'header.tpl',
-    'footer'=>'footer.tpl',
+    'themPath'=>'lib/public/thems/'.$CONFIG['themDefault'],
   ];
   $THEM = 'lib/public/thems/'.$CONFIG['themDefault'];
 
@@ -25,18 +35,10 @@
   */
   include 'lib/model/pdo.php';
 
-  /*
-      Autoloading of PHP class
-  */
-  spl_autoload_register(function ($class) {
-      include 'lib/controler/'.$class.'.class.php';
-  });
-
   /* create USER */
   $USER = new user();
   /* create PAGE */
   $page = new page();
-
 
   // GENERATE MENU
   $addTPL = [
@@ -93,11 +95,6 @@
     ];
   }
 
-  //
-  // $physicly = 'lib/public/pages/'.$PATH['page'];
-  // if(file_exists($physicly)){
-  //   include $physicly;
-  // }
   $TPL=array_merge($TPL,$addTPL);
 
   $opts = [

@@ -1,53 +1,53 @@
 <?php
 
 $content = '';
-$content .= '<a href="?NewPage">Créer une page</a> | ';
-$content .= '<a href="?EditPage">Éditer une page</a> | ';
-$content .= '<a href="?DelPage">Supprimer une page</a> | ';
+$content .= '<a href="?NewPage" class="pbutton">Créer une page</a> | ';
+$content .= '<a href="?EditPage" class="pbutton">Éditer une page</a> | ';
+$content .= '<a href="?NewProject" class="pbutton">Créer un Projet</a> | ';
+$content .= '<a href="?EditProject" class="pbutton">Éditer une Projet</a> | ';
 $content .= '<br>';
 
 if(
     isset($_SESSION['login'])
-    && empty($_SESSION['login'])
+    && !empty($_SESSION['login'])
   ){
-
-
-    //  evoyer une page
-    if(isset($_POST['page'])){
-
-    }
-    //  ennvoyer un projet
-    elseif(isset($_POST['projet'])){
-
-    }
 
     // formulaire envois nouvelle page
     if(isset($_GET['NewPage'])){
+
+      //  tester
+      if(isset($_POST['page'])){
+
+      }
+
       $page = new page();
-      $page->form_page(['title'=>'defaut','content'=>'Contenu par defaut.']);
+      $content .= $page->form_page([
+        'title'=>'defaut',
+        'content'=>'Contenu par defaut.',
+        'login'=>$_SESSION['login'],
+        'publication' => date('d/m/Y')
+      ]);
     }
 
-    // formulaire envois nouvelle page
+    // formulaire envois de pages en édition
     elseif(isset($_GET['EditPage'])){
+
       $page = new page();
-      $list='';
-      if(empty($_GET['EditPage'])){
-        foreach($page->getAllMetas() as $elem){
-          $list='<a href="?EditPage='.$elem['url'].'">'.$elem['title'].'</a>';
-        }
-        $content .= $list.'truc';
+      //  tester
+      if(isset($_POST['page'])){
+        $return = $page->pageSumit();
+        $content .= $page->pageEditor($_GET['EditPage']);
+
+      } else{
+        $content .= $page->pageEditor($_GET['EditPage']);
       }
-      else{
-        $content .= $page->form_page($page->getByUrl($_GET['EditPage']));
-      }
+
     }
 
     // formulaire envoie nouveau projet
     if(isset($_GET['NewProject'])){
       $PROJECT = new project();
     }
-
-
   }
 
   $addTPL = [

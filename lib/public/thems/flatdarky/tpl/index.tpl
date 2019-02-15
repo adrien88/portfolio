@@ -16,23 +16,22 @@
 
     $metaog
 
-    <link rel="stylesheet" href="lib/public/bootstrap_4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-    <link rel="stylesheet" href="lib/public/thems/flatdarky/css/style.css">
+    <link rel="stylesheet" href="lib/public/bootstrap_4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="?CssFile=$themPath/css/style.css">
 
     $stylesheet
-
 
   </head>
 
   <body>
 
     <div class="container-fluid navbarBase">
-      %nav.tpl
+      %around/nav.tpl
     </div>
 
     <header class="container-fluid" id="header" style='background-image:url("$thumbnail");'>
-      %header.tpl
+      %around/header.tpl
     </header>
 
     <main class="container-fluid" id="main">
@@ -40,7 +39,7 @@
     </main>
 
     <footer class="container-fluid" id="footer" style='background-image:url("$thumbnail");'>
-      %footer.tpl
+      %around/footer.tpl
     </footer>
 
     <script src="lib/public/thems/flatdarky/js/style.js"></script>

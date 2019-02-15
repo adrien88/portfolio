@@ -7,7 +7,7 @@ class pageManager {
   */
   public function getByUrl($url){
     global $PDO;
-    $req='SELECT * FROM pages WHERE url = ? ;';
+    $req='SELECT * FROM pages INNER JOIN users ON pages.id_owner = users.id  WHERE url = ? ;';
     $stat=$PDO->prepare($req);
     $stat->execute(array($url));
     if($stat!==false){
@@ -21,7 +21,7 @@ class pageManager {
   */
   public function getUrls(){
     global $PDO;
-    $req='SELECT url,title FROM pages ;';
+    $req='SELECT url,title,description FROM pages ;';
     $stat=$PDO->prepare($req);
     $stat->execute();
     if($stat!==false){
