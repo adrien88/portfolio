@@ -26,16 +26,17 @@ body{
   color:black;
 
   p, li, a {
-    color:white;
+    color:black;
     font-family:'RobotoLight';
     font-size: 1.1em;
     font-weight: normal;
     &:hover{
-      color:white;
+      color:black;
     }
   }
 
   h1, h2 {
+    color:black;
     font-family:'RobotoBold';
     font-size: 1.4em;
   }
@@ -44,7 +45,8 @@ body{
   }
 
   header, footer, main {
-    background-color:lightgreen;
+    background-color:rgba(110,162,102,1);
+    // background-image:linear-gradient(to left,#ccd, #efe 20%, #eef 80%, #dde);
     background-size: cover;
     background-attachment: fixed;
 
@@ -57,46 +59,51 @@ body{
   }
 
   header {
+    background-color:gray;
 
-    p{
-      margin-left:2em;
-      font-family:'Roboto';
+    >.row {
+      background-color:rgba(0,0,0,0.2);
     }
-
-    .technoUsed{
-      display:inline-block;
-      padding:.5em;
-      i {font-size:1.2em}
+    .col-12{
+      margin-top:20vh;
+      background-color:rgba(0,0,0,0.6);
+      text-align: left;
+      padding:1em;
+      h1,h2{
+        color:white;
+        letter-spacing: .05em;
+      }
+      p{
+        color:white;
+        margin-left:2em;
+        font-family:'Roboto';
+      }
     }
-
-    #t-html i {color:orange;}
-    #t-css i {color:steelblue;}
-    #t-js i {color:gold;}
-    #t-php i {color:purple;}
-    #t-sql i {color:cyan;}
 
   }
-  //
-  // .row {
-  //   padding:0;
-  // }
+
 
   div.navbarBase {
     background-color: gray;
     div.row {
       background-color: gray;
       nav#navbar{
-        background-color: gray;
-        ul{
-          li{
-            // margin-right:1em;
-            a {
-              text-decoration: none;
-              color: gray;
-              &:hover {
-                color: white;
-              }
-            }
+        background-color:#444 !important;
+
+        a {
+          text-decoration: none;
+          color: white;
+          &:hover {
+            color: white;
+          }
+        }
+        .dropdown-menu {
+          background-color:#444 !important;
+
+          .dropdown-menu-item{
+            display:block;
+            padding:.5em;
+            background-color:#444 !important;
           }
         }
       }
@@ -114,24 +121,65 @@ body{
 
   section {
 
+    table{
+      tr{
+        &:hover{
+          background-color:rgba(#435b43,1);
+        }
+        td{padding:.5em;}
+      }
+    }
+
+    textarea{
+      width:100%;
+      min-height:40vh;
+    }
+
     article, aside {
+      background-color:rgba(#fff,1);
+      color:black !important;
       padding:1em;
+    }
+
+    .pbutton{
+      padding:.5em;
+      background-color:rgba(#435b43,1);
+      text-decoration:none;
+    }
+
+    label{
+      font-weight:bold;
+      text-transform:capitalize ;
     }
 
   }
 
   footer {
-    .h2-title{
+    background-color:gray;
+    color:white;
+
+    #title-footer{
+      background-color:rgba(0,0,0,0.8);
       text-align: center;
-      letter-spacing: .25em;
+      h2{
+        letter-spacing: .5em;
+      }
+    }
+    h2, p{
+      color:white;
+    }
+    >.row {
+      background-color:rgba(0,0,0,0.8);
     }
     div {
+      color:white;
       padding-top:1em;
     }
 
     ul {
       padding-left: 0em;
       li {
+        color:white;
         list-style: none;
       }
       a {
@@ -199,8 +247,9 @@ body{
       } // end of thumbnais projets
 
     }
-
     }
+
+
 }
 /* ----------------------------------------------------------------------------------------------
 MEDIA QUERIES

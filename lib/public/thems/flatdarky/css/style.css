@@ -23,54 +23,59 @@ body {
   SuperEFFECT
   ---------------------------------------------------------------------------------------------- */ }
   body p, body li, body a {
-    color: white;
+    color: black;
     font-family: 'RobotoLight';
     font-size: 1.1em;
     font-weight: normal; }
     body p:hover, body li:hover, body a:hover {
-      color: white; }
+      color: black; }
   body h1, body h2 {
+    color: black;
     font-family: 'RobotoBold';
     font-size: 1.4em; }
   body h1 {
     font-size: 2.2em; }
   body header, body footer, body main {
-    background-color: lightgreen;
+    background-color: #6ea266;
     background-size: cover;
     background-attachment: fixed; }
     body header section, body footer section, body main section {
       background-color: rgba(0, 0, 0, 0.5);
       color: white;
       padding: 1em; }
-  body header p {
-    margin-left: 2em;
-    font-family: 'Roboto'; }
-  body header .technoUsed {
-    display: inline-block;
-    padding: .5em; }
-    body header .technoUsed i {
-      font-size: 1.2em; }
-  body header #t-html i {
-    color: orange; }
-  body header #t-css i {
-    color: steelblue; }
-  body header #t-js i {
-    color: gold; }
-  body header #t-php i {
-    color: purple; }
-  body header #t-sql i {
-    color: cyan; }
+  body header {
+    background-color: gray; }
+    body header > .row {
+      background-color: rgba(0, 0, 0, 0.2); }
+    body header .col-12 {
+      margin-top: 20vh;
+      background-color: rgba(0, 0, 0, 0.6);
+      text-align: left;
+      padding: 1em; }
+      body header .col-12 h1, body header .col-12 h2 {
+        color: white;
+        letter-spacing: .05em; }
+      body header .col-12 p {
+        color: white;
+        margin-left: 2em;
+        font-family: 'Roboto'; }
   body div.navbarBase {
     background-color: gray; }
     body div.navbarBase div.row {
       background-color: gray; }
       body div.navbarBase div.row nav#navbar {
-        background-color: gray; }
-        body div.navbarBase div.row nav#navbar ul li a {
+        background-color: #444 !important; }
+        body div.navbarBase div.row nav#navbar a {
           text-decoration: none;
-          color: gray; }
-          body div.navbarBase div.row nav#navbar ul li a:hover {
+          color: white; }
+          body div.navbarBase div.row nav#navbar a:hover {
             color: white; }
+        body div.navbarBase div.row nav#navbar .dropdown-menu {
+          background-color: #444 !important; }
+          body div.navbarBase div.row nav#navbar .dropdown-menu .dropdown-menu-item {
+            display: block;
+            padding: .5em;
+            background-color: #444 !important; }
   body .h2-title {
     background-color: black;
     color: white;
@@ -78,21 +83,48 @@ body {
     width: 100%;
     font-family: 'RobotoLight';
     text-transform: uppercase; }
+  body section table tr:hover {
+    background-color: #435b43; }
+  body section table tr td {
+    padding: .5em; }
+  body section textarea {
+    width: 100%;
+    min-height: 40vh; }
   body section article, body section aside {
+    background-color: white;
+    color: black !important;
     padding: 1em; }
-  body footer .h2-title {
-    text-align: center;
-    letter-spacing: .25em; }
-  body footer div {
-    padding-top: 1em; }
-  body footer ul {
-    padding-left: 0em; }
-    body footer ul li {
-      list-style: none; }
-    body footer ul a {
-      color: #ccc; }
-    body footer ul li:hover a {
+  body section .pbutton {
+    padding: .5em;
+    background-color: #435b43;
+    text-decoration: none; }
+  body section label {
+    font-weight: bold;
+    text-transform: capitalize; }
+  body footer {
+    background-color: gray;
+    color: white; }
+    body footer #title-footer {
+      background-color: rgba(0, 0, 0, 0.8);
+      text-align: center; }
+      body footer #title-footer h2 {
+        letter-spacing: .5em; }
+    body footer h2, body footer p {
       color: white; }
+    body footer > .row {
+      background-color: rgba(0, 0, 0, 0.8); }
+    body footer div {
+      color: white;
+      padding-top: 1em; }
+    body footer ul {
+      padding-left: 0em; }
+      body footer ul li {
+        color: white;
+        list-style: none; }
+      body footer ul a {
+        color: #ccc; }
+      body footer ul li:hover a {
+        color: white; }
   body div#newAnim {
     padding: 0px !important; }
     body div#newAnim a .projet_thumbnail {
