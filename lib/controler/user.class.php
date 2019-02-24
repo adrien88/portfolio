@@ -10,6 +10,7 @@ class user extends userManager {
       && !isset($_SESSION['try'])
     ){
       $_SESSION['try']=3;
+      $_SESSION['login']='Visiteur';
     }
   }
 
@@ -52,6 +53,7 @@ class user extends userManager {
             ){
               $mssg =  "Vous êtes connnecté.";
               $_SESSION['login']=$data['login'];
+              $_SESSION['id_user']=$data['id_user'];
               header('location:dash.php');
               exit;
             }
@@ -89,14 +91,15 @@ class user extends userManager {
   }
 
   public function dropdown_user(){
-    if(isset($_SESSION['login'])){
-      $dropdown='> '.$_SESSION['login'].' : ';
-      $dropdown.='<a href="login.php?closeSession">Déconnexion</a>';
-      $dropdown.='<a href="dash.php">Dashboard</a>';
-
+    if(
+      isset($_SESSION['login'])
+      && $_SESSION['login'] != 'Visiteur'
+    ){
+      $dropdown='<a class="dropdown-menu-item" href="dash.php"> Dashboard </a>';
+      $dropdown.=' <a class="dropdown-menu-item" href="login.php?closeSession">Déconnexion</a>';
     }
     else{
-      $dropdown='<a href="login.php">Connexion</a>';
+      $dropdown='<a class="dropdown-menu-item" href="login.php">Connexion</a>';
     }
     return $dropdown;
   }
@@ -105,7 +108,7 @@ class user extends userManager {
     if(isset($_SESSION['login'])){
       $_SESSION=null;
       session_destroy();
-      header('location:');
+      header('location:./login.php');
       exit;
     }
   }

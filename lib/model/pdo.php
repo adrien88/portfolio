@@ -18,3 +18,79 @@ $DB=parse_ini_file('config.ini',1)['database'];
  }
 
 unset($DB);
+
+
+// PDO object: $PDO
+// table name
+// tableau data :
+//  [titre] = film
+//  return
+//     -> true if all ok
+//     -> error message if error (ex : duplicate entry)
+function reqInsert($PDO, $table, array $data) {
+  // formater la requête
+  $prepreq = implode(',',array_keys($data));
+  $prepval = ':'.implode(',:',array_keys($data));
+  // Sand
+  $req = "INSERT INTO $table ($prepreq) VALUES ($prepval)";
+  echo $req;
+  $stat = $PDO -> prepare($req);
+  $stat -> execute($data);
+  if(
+    ($error = $stat->errorInfo()[2]) &&
+    !empty($error)
+  ) {
+    return $error;
+  }
+  else {
+    return true;
+  }
+}
+// PDO object: $PDO
+// table name
+// tableau data :
+//  [titre] = film
+//  return
+//     -> true if all ok
+//     -> error message if error (ex : duplicate entry)
+function reqUpdate($PDO, $table, array $data) {
+  // formater la requête
+  $prepreq = implode(',',array_keys($data));
+  $prepval = ':'.implode(',:',array_keys($data));
+  // Sand
+  $req = "UPDATE $table VALUES ($prepval)";
+  echo $req;
+  $stat = $PDO -> prepare($req);
+  $stat -> execute($data);
+  if(
+    ($error = $stat->errorInfo()[2]) &&
+    !empty($error)
+  ) {
+    return $error;
+  }
+  else {
+    return true;
+  }
+}
+
+// PDO object: $PDO
+// select request : SELECT * FROM Users WHERE Prenom = "adrien" etc.
+//  return
+//     -> data[0]['stuff'] if multidimentional (any lines, numbured)
+//     -> data['stuff'] if only one row matche
+//     -> SQL error message if SQL Error
+
+function reqSelect($PDO, $req) {
+  $stat = $PDO -> prepare($req);
+  $stat -> execute();
+  if(
+    ($error = $stat->errorInfo()[2]) &&
+    !empty($error)
+   ) {
+    return $error;
+  }
+  else {
+    $data = $stat->fetchAll();
+    return isset($data[1]) ? $data : $data[0];
+  }
+}

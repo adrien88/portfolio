@@ -14,7 +14,7 @@ class minifier{
       $CSS = file_get_contents($_GET['CssFile']);
       // redeclare header HTTP
       header('Content-Type:text/css; charset=utf-8');
-      echo $CSS;
+      echo self::css($CSS);
       exit;
     }
 
@@ -28,7 +28,7 @@ class minifier{
       $JS = file_get_contents($_GET['JsFile']);
       // redeclare header HTTP
       header('Content-Type:application/javascript; charset=utf-8');
-      echo $JS;
+      echo self::js($JS);
       exit;
     }
   }
@@ -40,10 +40,9 @@ class minifier{
     //  Delete useless spaces
     $CSS = preg_replace("# {2,}#",'',$CSS);
     // delete comments
-    $CSS = preg_replace("#/\*[a-z0-9-_. :;\#\+=]+\*/#i",'',$CSS);
+    $CSS = preg_replace("#/\*[a-z0-9-_. :;/\#\+=]+\*/#i",'',$CSS);
     // Send CSS
     return $CSS;
-
   }
 
   public static function js($JS){

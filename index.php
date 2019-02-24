@@ -13,10 +13,11 @@
     load config
   */
   $CONFIG = parse_ini_file('config.ini',1)['site'];
+
   /*
     load config
   */
-  minifier::auto();
+  // minifier::auto();
 
   /*
       defaut render
@@ -28,7 +29,8 @@
     'description'=>$CONFIG['sitedescription'],
     'themPath'=>'lib/public/thems/'.$CONFIG['themDefault'],
   ];
-  $THEM = 'lib/public/thems/'.$CONFIG['themDefault'];
+  $THEM = 'lib/public/thems/'.$CONFIG['themDefault'].'/tpl/';
+
 
   /*
       load PDO
@@ -42,6 +44,7 @@
 
   // GENERATE MENU
   $addTPL = [
+    'login'=>ucfirst($_SESSION['login']),
     'navbar_pages'=>$page->BootstrapMenu(),
     'dropdown_user'=>$USER->dropdown_user()
   ];
@@ -59,18 +62,6 @@
   // echo '>>'.$PATH['docRoot'];
 
   /*
-      Load from cache
-  */
-  $cache='lib/public/cache/'.$PATH['page'];
-  if(
-    file_exists($cache)
-    && ((filemtime($cache) + 3600) < time())
-  ){
-    include $cache;
-    exit;
-  }
-
-  /*
       Create content
   */
   $data = $page->getByUrl($PATH['page']);
@@ -80,10 +71,12 @@
       'main'=>'page.tpl'
     ];
     $addTPL=array_merge($addTPL,$data);
+    $parser='';
   }
   // test statics pasgge
   elseif(file_exists('lib/public/pages/'.$PATH['page'])){
     include 'lib/public/pages/'.$PATH['page'];
+    // $THEM = 'lib/public';
   }
   // Send error
   else{
@@ -105,8 +98,7 @@
   /*
       Build page
   */
-  // $tpl = file_get_contents();
-  echo parser::auto($THEM.'/tpl/',$TPL,$opts);
+  echo parser::auto($THEM,$TPL,$opts);
 
 
  ?>

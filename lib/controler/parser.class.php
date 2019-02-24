@@ -14,7 +14,7 @@
        @folder : assembly automaticaly
     */
     public static function auto($folder,array $data,array $opts){
-      $tpl=self::assembly($folder.'/index.tpl', [
+      $tpl=self::assembler($folder.'/index.tpl', [
         'DIR'=>$folder,
         'clean'=>null
         ]);
@@ -34,15 +34,12 @@
     /*
         ASSEMBLING
     */
-    public function assembly($tpl, array $opts){
+    public function assembler($tpl, array $opts){
+      extract($opts);
 
-      if (isset($opts)){
-        extract($opts);
-      }
       if(file_exists($tpl)){
         $tpl=file_get_contents($tpl);
       }
-
       $out=$tpl;
       preg_match_all('#%([a-z0-9._-]/?)+#i',$tpl,$matches);
       // if matches
@@ -53,7 +50,7 @@
 
           if(file_exists($path))
           {
-            $loaded = self::assembly($path,$opts);
+            $loaded = self::assembler($path,$opts);
             $out = str_replace($patt,$loaded,$out);
           }
         }
@@ -64,10 +61,8 @@
 
 
     public static function parserHTML($tpl, array $data, array $opts){
+      extract($opts);
 
-      if (isset($opts)){
-        extract($opts);
-      }
 
       // get all occurences
       preg_match_all('#\$[a-z0-9_-]+#i',$tpl,$matches);
@@ -85,12 +80,43 @@
           elseif(isset($clean)){
             $tpl=str_replace($patt,'',$tpl);
           }
-
         }
       }
 
       return $tpl;
     }
+
+    public function parserFUNC($tpl, array $data, array $opts){
+      extract($opts);
+
+      // get all occurences
+      preg_match_all('#\#[a-z0-9_-](\(([a-z0-9_-]+,?)?\))+#i',$tpl,$matches);
+
+      if(isset($matches) && !empty($matches)){
+        //  browse matches
+        foreach($matches[0] as $patt){
+          $patt = substr($patt,1);
+          // execute content
+          if(
+            ($fname=preg_replace('#([a-z0-9_-]+)(\(([a-z0-9_-]+,?)?\))+#i','$1',$patt))
+            && function_exists($fname)
+          ){
+            $tpl=exec($patt);
+          }
+          // cleanning the hood
+          elseif(isset($clean)){
+            $tpl=str_replace($patt,'',$tpl);
+          }
+        }
+      }
+
+      return $tpl;
+    }
+
+
+
+
+
 
 
     //
